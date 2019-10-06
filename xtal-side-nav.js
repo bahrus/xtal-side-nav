@@ -79,6 +79,7 @@ export class XtalSideNav extends XtalElement {
         if (!super.onPropsChange())
             return false;
         this.initShadowRoot();
+        return true;
     }
     openMenu(e) {
         this.setWidth(250);
