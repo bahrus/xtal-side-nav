@@ -1,0 +1,20 @@
+{
+  "name": "xtal-side-nav",
+  "version": "0.0.0",
+  "description": "TBD",
+  "main": "xtal-side-nav.js",
+  "module": "xtal-side-nav.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahrus/xtal-side-nav.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahrus/xtal-side-nav/issues"
+  },
+  "homepage": "https://github.com/bahrus/xtal-side-nav#readme"
+}
