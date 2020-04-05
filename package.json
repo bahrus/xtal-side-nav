@@ -12,16 +12,12 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "trans-render": "0.0.134",
-    "xtal-element": "0.0.85"
+    "trans-render": "0.0.143",
+    "xtal-element": "0.0.101"
   },
   "devDependencies": {
-    "@types/node": "12.7.11",
-    "@types/tape": "4.2.33",
-    "@webcomponents/webcomponentsjs": "2.3.0",
-    "jiife": "0.0.14",
-    "tape": "4.11.0",
-    "xtal-test": "0.0.20"
+    "@webcomponents/webcomponentsjs": "2.4.3",
+    "xtal-test": "0.0.44"
   },
   "author": "",
   "license": "MIT",
