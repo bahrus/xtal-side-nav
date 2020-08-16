@@ -1,4 +1,5 @@
-import {XtalElement, define, TransformValueOptions} from 'xtal-element/XtalElement.js';
+import { XtalElement, define, TransformValueOptions } from 'xtal-element/XtalElement.js';
+import { templStampSym } from 'trans-render/plugins/templStamp.js';
 import { createTemplate } from "trans-render/createTemplate.js";
 const mainTemplate = createTemplate(/* html*/`
 <style>
@@ -32,7 +33,7 @@ const mainTemplate = createTemplate(/* html*/`
         color: #f1f1f1;
     }
 
-    .sidenav #closebtn {
+    .sidenav [part="closeBtn"] {
         position: absolute;
         cursor:pointer;
         top: 0;
@@ -50,14 +51,16 @@ const mainTemplate = createTemplate(/* html*/`
         }
     }
 </style>
-<span id="opener" style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
-<div id="mySidenav" class="sidenav">
-    <a id="closebtn">&times;</a>
+<span part=opener style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
+<div part=sideNav class="sidenav">
+    <a part="closeBtn">&times;</a>
     <slot id="slot"></slot>
 </div>
 
 `);
+const uiRefs = {sideNav: Symbol('sideNav')};
 const initTransform = ({openMenu, closeMenu}: XtalSideNav) => ({
+    ':host': [templStampSym, uiRefs],
     span: [{}, {click:openMenu}],
     div:{
         'a,slot': [{}, {click:closeMenu}]
@@ -75,7 +78,7 @@ export class XtalSideNav extends XtalElement{
         this.setWidth(250);
     }
     setWidth(width: number){
-        this.shadowRoot!.getElementById('mySidenav')!.style.width = width + 'px';
+        (<any>this)[uiRefs.sideNav].style.width = width + 'px';
     }
     closeMenu(e: Event){
         this.setWidth(0);
