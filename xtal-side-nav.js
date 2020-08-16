@@ -1,12 +1,6 @@
-import { XtalElement } from 'xtal-element/xtal-element.js';
-import { define } from 'trans-render/define.js';
-import { createTemplate, newRenderContext } from "xtal-element/utils.js";
+import { XtalElement, define } from 'xtal-element/XtalElement.js';
+import { createTemplate } from "trans-render/createTemplate.js";
 const mainTemplate = createTemplate(/* html*/ `
-<span id="opener" style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
-<div id="mySidenav" class="sidenav">
-    <a id="closebtn">&times;</a>
-    <slot id="slot"></slot>
-</div>
 <style>
     :host {
         display: block;
@@ -56,30 +50,26 @@ const mainTemplate = createTemplate(/* html*/ `
         }
     }
 </style>
+<span id="opener" style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
+<div id="mySidenav" class="sidenav">
+    <a id="closebtn">&times;</a>
+    <slot id="slot"></slot>
+</div>
+
 `);
+const initTransform = ({ openMenu, closeMenu }) => ({
+    span: [{}, { click: openMenu }],
+    div: {
+        'a,slot': [{}, { click: closeMenu }]
+    }
+});
 export class XtalSideNav extends XtalElement {
     constructor() {
         super(...arguments);
-        this._initContext = newRenderContext({});
-    }
-    static get is() { return 'xtal-side-nav'; }
-    get eventContext() {
-        return {};
-    }
-    get mainTemplate() {
-        return mainTemplate;
-    }
-    get initContext() {
-        return this._initContext;
-    }
-    get readyToInit() {
-        return true;
-    }
-    onPropsChange() {
-        if (!super.onPropsChange())
-            return false;
-        this.initShadowRoot();
-        return true;
+        this.readyToInit = true;
+        this.mainTemplate = mainTemplate;
+        this.readyToRender = true;
+        this.initTransform = initTransform;
     }
     openMenu(e) {
         this.setWidth(250);
@@ -90,20 +80,6 @@ export class XtalSideNav extends XtalElement {
     closeMenu(e) {
         this.setWidth(0);
     }
-    initShadowRoot() {
-        this._opener = this.shadowRoot.getElementById('opener');
-        this._boundOpener = this.openMenu.bind(this);
-        this._opener.addEventListener('click', this._boundOpener);
-        this._closer = this.shadowRoot.getElementById('closebtn');
-        this._boundCloser = this.closeMenu.bind(this);
-        this._closer.addEventListener('click', this._boundCloser);
-        this._slot = this.shadowRoot.getElementById('slot');
-        this._slot.addEventListener('click', this._boundCloser);
-    }
-    disconnectedCallback() {
-        this._opener.removeEventListener('click', this._boundOpener);
-        this._closer.removeEventListener('click', this._boundCloser);
-        this._slot.removeEventListener('click', this._boundCloser);
-    }
 }
+XtalSideNav.is = 'xtal-side-nav';
 define(XtalSideNav);

@@ -5,19 +5,21 @@
   "main": "xtal-side-nav.js",
   "module": "xtal-side-nav.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "es-dev-server --app-index demo/dev.html --node-resolve --watch --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "trans-render": "0.0.143",
-    "xtal-element": "0.0.101"
+    "trans-render": "0.0.246",
+    "xtal-element": "0.0.274"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "2.4.3",
-    "xtal-test": "0.0.44"
+    "@webcomponents/webcomponentsjs": "2.4.4",
+    "xtal-test": "0.0.46",
+    "es-dev-server": "1.57.2"
   },
   "author": "",
   "license": "MIT",
