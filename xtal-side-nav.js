@@ -1,7 +1,7 @@
-import { XtalElement, define } from 'xtal-element/XtalElement.js';
-import { templStampSym } from 'trans-render/plugins/templStamp.js';
-import { createTemplate } from "trans-render/createTemplate.js";
-const mainTemplate = createTemplate(/* html*/ `
+import { html } from 'trans-render/lib/html.js';
+import { def } from 'd-fine/def.js';
+import('tran-sister/tran-sister.js');
+const mainTemplate = html `
 <style>
     :host {
         display: block;
@@ -41,6 +41,10 @@ const mainTemplate = createTemplate(/* html*/ `
         font-size: 36px;
         margin-left: 50px;
     }
+    .opener{
+        font-size:30px;
+        cursor:pointer
+    }
 
     @media screen and (max-height: 450px) {
         .sidenav {
@@ -51,38 +55,20 @@ const mainTemplate = createTemplate(/* html*/ `
         }
     }
 </style>
-<span part=opener style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
+<button part=opener class=opener>&#9776; <slot name="title"></slot></button>
+<tran-sister on=click transform='{
+    ".sidenav": [{"style": {"width": "250px"}}]
+}'></tran-sister>
 <div part=sideNav class="sidenav">
-    <a part="closeBtn">&times;</a>
+    <button part="closeBtn">&times;</button>
+    <tran-sister on=click transform='{
+        ".sidenav": [{"style": {"width": "0px"}}]
+    }'></tran-sister>
     <slot id="slot"></slot>
 </div>
-
-`);
-const uiRefs = { sideNav: Symbol('sideNav') };
-const initTransform = ({ openMenu, closeMenu }) => ({
-    ':host': [templStampSym, uiRefs],
-    span: [{}, { click: openMenu }],
-    div: {
-        'a,slot': [{}, { click: closeMenu }]
+`;
+def(mainTemplate, [], {}, false, {
+    config: {
+        tagName: 'xtal-side-nav'
     }
 });
-export class XtalSideNav extends XtalElement {
-    constructor() {
-        super(...arguments);
-        this.readyToInit = true;
-        this.mainTemplate = mainTemplate;
-        this.readyToRender = true;
-        this.initTransform = initTransform;
-    }
-    openMenu(e) {
-        this.setWidth(250);
-    }
-    setWidth(width) {
-        this[uiRefs.sideNav].style.width = width + 'px';
-    }
-    closeMenu(e) {
-        this.setWidth(0);
-    }
-}
-XtalSideNav.is = 'xtal-side-nav';
-define(XtalSideNav);

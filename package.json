@@ -1,12 +1,31 @@
 {
   "name": "xtal-side-nav",
   "version": "0.0.3",
-  "description": "TBD",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements",
+    "JSON",
+    "Editor"
+  ],
+  "description": "Side nav (drawer) web component.",
   "main": "xtal-side-nav.js",
   "module": "xtal-side-nav.js",
+  "exports": {
+    ".": "./xtal-side-nav.js",
+    "./xtal-side-nav.js": "./xtal-side-nav.js"
+  },
+  "files": [
+    "x*.*",
+    "custom-elements.json",
+    "types.d.ts"
+  ],
   "scripts": {
     "serve": "node node_modules/xtal-test/serve.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-check": "package-check",
+    "doc": "custom-elements-manifest analyze"
   },
   "repository": {
     "type": "git",
@@ -18,12 +37,15 @@
     "tran-sister": "0.0.7"
   },
   "devDependencies": {
-    "xtal-test": "0.0.51"
+    "@skypack/package-check": "0.2.2",
+    "xtal-test": "0.0.51",
+    "@custom-elements-manifest/analyzer": "0.5.3"
   },
-  "author": "",
+  "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bahrus/xtal-side-nav/issues"
   },
-  "homepage": "https://github.com/bahrus/xtal-side-nav#readme"
+  "homepage": "https://github.com/bahrus/xtal-side-nav#readme",
+  "customElements": "custom-elements.json"
 }

@@ -1,2 +1,3 @@
 # xtal-side-nav
-TBD
+
+Side nav (drawer) web component.

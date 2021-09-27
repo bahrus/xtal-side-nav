@@ -9,7 +9,7 @@
 		"watch": true
 	},
 	"files": [
-		"xtal-side-nav2.ts"
+		"xtal-side-nav.ts"
 	],
 	"exclude":[
 		"build",
