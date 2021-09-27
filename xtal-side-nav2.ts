@@ -52,7 +52,7 @@ const mainTemplate = html`
         }
     }
 </style>
-<span part=opener style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
+<button part=opener style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></button>
 <tran-sister on=click transform='{
     ".sidenav": [{"style": {"width": "250px"}}]
 }'></tran-sister>
