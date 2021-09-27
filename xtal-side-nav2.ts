@@ -1,5 +1,6 @@
 import {html} from 'trans-render/lib/html.js';
 import {def} from 'd-fine/def.js';
+import('tran-sister/tran-sister.js');
 
 const mainTemplate = html`
 <style>
@@ -52,6 +53,9 @@ const mainTemplate = html`
     }
 </style>
 <span part=opener style="font-size:30px;cursor:pointer">&#9776; <slot name="title"></slot></span>
+<tran-sister on=click transform='{
+    ".sidenav": [{"style": {"width": "250px"}}]
+}'></tran-sister>
 <div part=sideNav class="sidenav">
     <a part="closeBtn">&times;</a>
     <slot id="slot"></slot>
