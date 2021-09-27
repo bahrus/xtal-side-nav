@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side Nav</title>
+    <title>Document</title>
 </head>
 <body>
     <xtal-side-nav>
         <h3>Test</h3>
     </xtal-side-nav>
+    <script type=importmap>
+        {
+            "imports": {
+                "trans-render/": "../node_modules/trans-render/",
+                "d-fine/": "../node_modules/d-fine/",
+                "xodus/": "../node_modules/xodus/",
+                "tran-sister/": "../node_modules/tran-sister/",
+                "on-to-me/": "../node_modules/on-to-me/"
+            }
+        }
+    </script>
     <script type=module>
         import '../xtal-side-nav.js';
     </script>

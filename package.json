@@ -32,9 +32,9 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "d-fine": "0.0.19",
+    "d-fine": "0.0.20",
     "trans-render": "0.0.414",
-    "tran-sister": "0.0.7"
+    "tran-sister": "0.0.8"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",
