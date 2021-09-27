@@ -8,6 +8,9 @@
 		"newLine": "LF",
 		"watch": true
 	},
+	"files": [
+		"xtal-side-nav2.ts"
+	],
 	"exclude":[
 		"build",
 		"bower_components",
