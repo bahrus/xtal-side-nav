@@ -7,7 +7,7 @@ const mainTemplate = html `
         display: block;
     }
 
-    .sidenav {
+    .side-nav {
         height: 100%;
         width: 0;
         position: fixed;
@@ -20,49 +20,52 @@ const mainTemplate = html `
         padding-top: 60px;
     }
 
-    .sidenav a {
+    .side-nav[data-open="true"]{
+        width: 250px;
+    }
+
+    .side-nav[data-open="false"]{
+        width: 0px;
+    }
+
+    /* .side-nav button {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
         color: #818181;
         display: block;
-        transition: 0.3s;
-    }
+        
+    } */
 
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
-    .sidenav [part="closeBtn"] {
+    .side-nav button {
         position: absolute;
         cursor:pointer;
         top: 0;
-        right: 25px;
+        right: 0px;
         font-size: 36px;
         margin-left: 50px;
+        transition: 0.3s;
     }
     .opener{
         font-size:30px;
         cursor:pointer
     }
 
+
     @media screen and (max-height: 450px) {
-        .sidenav {
+        .side-nav {
             padding-top: 15px;
-        }
-        .sidenav a {
-            font-size: 18px;
         }
     }
 </style>
-<button part=opener class=opener>&#9776; <slot name="title"></slot></button>
+<button part=opener class=opener>&#9776; <slot name=title></slot></button>
 <tran-sister on=click transform='{
-    ".sidenav": [{"style": {"width": "250px"}}]
+    ".side-nav": [{"dataset": {"open": "true"}}]
 }'></tran-sister>
-<div part=sideNav class="sidenav">
-    <button part="closeBtn">&times;</button>
+<div part=side-nav class=side-nav data-open=false>
+    <button part=close-btn>&times;</button>
     <tran-sister on=click transform='{
-        ".sidenav": [{"style": {"width": "0px"}}]
+        ".side-nav": [{"dataset": {"open": "false"}}]
     }'></tran-sister>
     <slot id="slot"></slot>
 </div>
