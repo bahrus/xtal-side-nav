@@ -6,6 +6,7 @@ const mainTemplate = html`
 <style>
     :host {
         display: block;
+        --drawer-width:250px;
     }
 
     .side-nav {
@@ -22,7 +23,7 @@ const mainTemplate = html`
     }
 
     .side-nav[data-open="true"]{
-        width: 250px;
+        width: var(--drawer-width);
     }
 
     .side-nav[data-open="false"]{
