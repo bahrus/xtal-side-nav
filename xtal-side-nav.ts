@@ -1,7 +1,7 @@
 import {html} from 'trans-render/lib/html.js';
 import {def} from 'd-fine/def.js';
-import('tran-sister/tran-sister.js');
-
+import('pass-up/p-u.js');
+import('pass-down/p-d.js');
 const mainTemplate = html`
 <style>
     :host {
@@ -61,20 +61,20 @@ const mainTemplate = html`
     }
 </style>
 <button part=opener class=opener>&#9776; <slot name=title></slot></button>
-<tran-sister on=click transform='{
-    ".side-nav": [{"dataset": {"open": "true"}}]
-}'></tran-sister>
-<div part=side-nav class=side-nav data-open=false>
+<p-u on=click to-host prop=open toggle-prop></p-u>
+<p-d observe-host on-prop=open vft=open to=[-data-open] as=str-attr></p-d>
+<div part=side-nav class=side-nav -data-open>
     <button part=close-btn>&times;</button>
-    <tran-sister on=click transform='{
-        ".side-nav": [{"dataset": {"open": "false"}}]
-    }'></tran-sister>
+    <p-u on=click to-host prop=open toggle-prop></p-u>
     <slot id="slot"></slot>
 </div>
 `;
 
 def(mainTemplate, [], {}, false, {
     config:{
-        tagName: 'xtal-side-nav'
+        tagName: 'xtal-side-nav',
+        propDefaults:{
+            open: false,
+        }
     }
 });
