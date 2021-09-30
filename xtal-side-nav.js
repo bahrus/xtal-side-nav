@@ -30,14 +30,6 @@ const mainTemplate = html `
         width: 0px;
     }
 
-    /* .side-nav button {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        
-    } */
 
     .side-nav button {
         position: absolute;
