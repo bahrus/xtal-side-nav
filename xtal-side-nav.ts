@@ -13,6 +13,8 @@ const mainTemplate = html`
         height: 100%;
         width: 0;
         position: absolute;
+        display:flex;
+        flex-direction:column;
         z-index: 10;
         top: 0;
         left: 0;
