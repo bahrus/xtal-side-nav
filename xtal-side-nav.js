@@ -2,6 +2,7 @@ import { html } from 'trans-render/lib/html.js';
 import { def } from 'd-fine/def.js';
 import('pass-up/p-u.js');
 import('pass-down/p-d.js');
+import('be-observant/be-observant.js');
 const mainTemplate = html `
 <style>
     :host {
@@ -56,12 +57,15 @@ const mainTemplate = html `
 </style>
 <button part=opener class=opener>&#9776; <slot name=title></slot></button>
 <p-u on=click to-host prop=open toggle-prop></p-u>
-<p-d observe-host on-prop=open vft=open to=[-data-open] as=str-attr></p-d>
-<div part=side-nav class=side-nav -data-open>
+<!-- <p-d observe-host on-prop=open vft=open to=[-data-open] as=str-attr></p-d> -->
+<div part=side-nav class=side-nav -data-open be-observant='{
+    "data-open": {"observeHost": true, "onProp": "open", "vft": "open", "as": "str-attr"}
+}'>
     <button part=close-btn>&times;</button>
     <p-u on=click to-host prop=open toggle-prop></p-u>
     <slot id="slot"></slot>
 </div>
+<be-observant></be-observant>
 `;
 def(mainTemplate, [], {}, false, {
     config: {
