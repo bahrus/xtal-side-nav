@@ -1,7 +1,6 @@
 import { html } from 'trans-render/lib/html.js';
 import { def } from 'd-fine/def.js';
 import('pass-up/p-u.js');
-import('pass-down/p-d.js');
 import('be-observant/be-observant.js');
 const mainTemplate = html `
 <style>
