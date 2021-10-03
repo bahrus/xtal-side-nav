@@ -1,6 +1,6 @@
 import { html } from 'trans-render/lib/html.js';
 import { def } from 'd-fine/def.js';
-import('pass-up/p-u.js');
+import('be-noticed/be-noticed.js');
 import('be-observant/be-observant.js');
 const mainTemplate = html `
 <style>
@@ -54,16 +54,19 @@ const mainTemplate = html `
         }
     }
 </style>
-<button part=opener class=opener>&#9776; <slot name=title></slot></button>
-<p-u on=click to-host prop=open toggle-prop></p-u>
+<button part=opener class=opener be-noticed='{
+    "click": {"prop": "open", "toggleProp": true}
+}'>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav -data-open be-observant='{
     "data-open": {"observeHost": true, "onProp": "open", "vft": "open", "as": "str-attr"}
 }'>
-    <button part=close-btn>&times;</button>
-    <p-u on=click to-host prop=open toggle-prop></p-u>
+    <button part=close-btn be-noticed='{
+        "click": {"prop": "open", "toggleProp": true}
+    }'>&times;</button>
     <slot id="slot"></slot>
 </div>
 <be-observant></be-observant>
+<be-noticed></be-noticed>
 `;
 def(mainTemplate, [], {}, false, {
     config: {
