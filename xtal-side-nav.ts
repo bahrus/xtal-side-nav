@@ -58,8 +58,8 @@ const mainTemplate = html`
 <button part=opener class=opener be-noticed='{
     "click": {"prop": "open", "toggleProp": true}
 }'>&#9776; <slot name=title></slot></button>
-<div part=side-nav class=side-nav -data-open be-observant='{
-    "data-open": {"observeHost": true, "onProp": "open", "vft": "open", "as": "str-attr"}
+<div part=side-nav class=side-nav be-observant='{
+    "data-open": {"onSet": "open", "vft": "open", "as": "str-attr"}
 }'>
     <button part=close-btn be-noticed='{
         "click": {"prop": "open", "toggleProp": true}
