@@ -1,8 +1,13 @@
 import {html} from 'trans-render/lib/html.js';
-import {def} from 'd-fine/def.js';
+import('be-definitive/be-definitive.js');
+import {DefineArgs} from 'trans-render/lib/types';
 import('be-noticed/be-noticed.js');
 import('be-observant/be-observant.js');
+import('be-hive/be-hive.js');
 
+if(document.querySelector('be-hive')===null){
+    document.body.appendChild(document.createElement('be-hive'));
+}
 const mainTemplate = html`
 <style>
     :host {
@@ -66,15 +71,17 @@ const mainTemplate = html`
     }'>&times;</button>
     <slot id="slot"></slot>
 </div>
-<be-observant></be-observant>
-<be-noticed></be-noticed>
+<be-hive></be-hive>
 `;
 
-def(mainTemplate, [], {}, false, {
+const beDefinitiveProps: DefineArgs = {
     config:{
         tagName: 'xtal-side-nav',
-        propDefaults:{
+        propDefaults: {
             open: false,
         }
     }
-});
+}
+mainTemplate.setAttribute('be-definitive', JSON.stringify(beDefinitiveProps));
+
+document.body.appendChild(mainTemplate);
