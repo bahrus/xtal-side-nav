@@ -58,13 +58,13 @@ const mainTemplate = html `
         }
     }
 </style>
-<button part=opener class=opener be-noticed='{
+<button aria-label="Open Menu" part=opener class=opener be-noticed='{
     "click": {"prop": "open", "toggleProp": true}
 }'>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav be-observant='{
     "data-open": {"onSet": "open", "vft": "open", "as": "str-attr"}
 }'>
-    <button part=close-btn be-noticed='{
+    <button aria-label="Close Menu" part=close-btn be-noticed='{
         "click": {"prop": "open", "toggleProp": true}
     }'>&times;</button>
     <slot id="slot"></slot>
