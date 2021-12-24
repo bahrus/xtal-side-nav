@@ -39,7 +39,7 @@
   "dependencies": {
     "trans-render": "0.0.441",
     "on-to-me": "0.0.49",
-    "be-active": "0.0.10",
+    "be-active": "0.0.11",
     "be-definitive": "0.0.21",
     "be-hive": "0.0.15",
     "be-loaded": "0.0.26",
