@@ -11,7 +11,7 @@ const template = html `
     }
 }}>
 <style>
-   :host {
+:host {
     display: block;
     --drawer-width:250px;
 }
@@ -38,10 +38,7 @@ const template = html `
 .side-nav[data-open="false"]{
     width: 0px;
     height:0px;
-    /* height:0px;
-    display:none; */
 }
-
 
 .side-nav button {
     position: absolute;

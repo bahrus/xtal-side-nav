@@ -3,7 +3,7 @@ import('be-active/be-active.js');
 const template = `
 <template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false}}}'>
 <style>
-   :host {
+:host {
     display: block;
     --drawer-width:250px;
 }
@@ -30,10 +30,7 @@ const template = `
 .side-nav[data-open="false"]{
     width: 0px;
     height:0px;
-    /* height:0px;
-    display:none; */
 }
-
 
 .side-nav button {
     position: absolute;
