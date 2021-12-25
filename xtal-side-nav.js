@@ -1,7 +1,17 @@
 import('be-definitive/be-definitive.js');
 import('be-active/be-active.js');
 document.body.insertAdjacentHTML('beforeend', `
-<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false}}}'>
+<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
+<template be-active>
+    <script id=be-noticed/be-noticed.js></script>
+</template>
+<button aria-label="Open Menu" part=opener class=opener be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&#9776; <slot name=title></slot></button>
+<div part=side-nav class=side-nav>
+    <button aria-label="Close Menu" part=close-btn be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&times;</button>
+    <slot id="slot"></slot>
+</div>
+<be-hive></be-hive>
+
 <style>
 :host {
     display: block;
@@ -23,11 +33,11 @@ document.body.insertAdjacentHTML('beforeend', `
     padding-top: 60px;
 }
 
-.side-nav[data-open="true"]{
+.side-nav[data-open]{
     width: var(--drawer-width);
 }
 
-.side-nav[data-open="false"]{
+.side-nav:not([data-open]){
     width: 0px;
     height:0px;
 }
@@ -53,16 +63,6 @@ document.body.insertAdjacentHTML('beforeend', `
     }
 } 
 </style>
-<template be-active>
-    <script id=be-noticed/be-noticed.js></script>
-    <script id=be-observant/be-observant.js></script>
-</template>
-<button aria-label="Open Menu" part=opener class=opener be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&#9776; <slot name=title></slot></button>
-<div part=side-nav data-open=false class=side-nav be-observant='{"data-open":{"onSet":"open","vft":"open","as":"str-attr"}}'>
-    <button aria-label="Close Menu" part=close-btn be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&times;</button>
-    <slot id="slot"></slot>
-</div>
-<be-hive></be-hive>
 </template>
 
 `);
