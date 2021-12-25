@@ -44,7 +44,7 @@
     "be-loaded": "0.0.26",
     "be-observant": "0.0.70",
     "be-noticed": "0.0.40",
-    "may-it-be": "0.0.7"
+    "may-it-be": "0.0.9"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",

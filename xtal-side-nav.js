@@ -1,6 +1,6 @@
 import('be-definitive/be-definitive.js');
 import('be-active/be-active.js');
-const template = `
+document.body.insertAdjacentHTML('beforeend', `
 <template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false}}}'>
 <style>
 :host {
@@ -65,6 +65,4 @@ const template = `
 <be-hive></be-hive>
 </template>
 
-`;
-document.body.insertAdjacentHTML('beforeend', template);
-
+`);

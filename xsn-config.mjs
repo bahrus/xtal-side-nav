@@ -1,4 +1,4 @@
-import { html } from 'may-it-be/index.js';
+import { html, define } from 'may-it-be/index.js';
 const template = html `
 <template ${{
     beDefinitive: {
@@ -84,9 +84,4 @@ const template = html `
 </template>
 
 `;
-const js = `import('be-definitive/be-definitive.js');
-import('be-active/be-active.js');
-const template = \`${template}\`;
-document.body.insertAdjacentHTML('beforeend', template);
-`;
-console.log(js);
+define(template);
