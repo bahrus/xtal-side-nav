@@ -13,9 +13,6 @@ const template = html `
         }
     }
 }}>
-<template be-active>
-    <script id=be-noticed/be-noticed.js></script>
-</template>
 <button aria-label="Open Menu" part=opener class=opener ${{
     beNoticed: {
         click: { prop: 'open', toggleProp: true }
@@ -83,4 +80,4 @@ const template = html `
 </template>
 
 `;
-define(template);
+define(template, ['be-noticed/be-noticed.js']);

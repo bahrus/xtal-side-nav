@@ -43,7 +43,7 @@
     "be-hive": "0.0.15",
     "be-loaded": "0.0.26",
     "be-noticed": "0.0.40",
-    "may-it-be": "0.0.9"
+    "may-it-be": "0.0.10"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",
