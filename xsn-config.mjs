@@ -83,4 +83,4 @@ const template = html `
 </template>
 
 `;
-define(template);
+define(template, console.log);
