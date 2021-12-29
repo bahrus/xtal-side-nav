@@ -1,19 +1,18 @@
 import {html, define} from 'may-it-be/index.js';
-import {MayItBe as mib } from 'may-it-be/types';
-const template = html`
-<template ${{
-    beDefinitive:{
-        config:{
-            tagName: 'xtal-side-nav',
-            propDefaults: {
-                open: false,
-                updateTransform: {
-                    sideNavParts: [{},{},{'data-open':'open'}]
-                }
+import {MayItBe as mib, BeDefinitiveVirtualProps } from 'may-it-be/types';
+const mode = process.argv[2] as '-js' | '-html';
+const beDefinitiveProps: BeDefinitiveVirtualProps = {
+    config: {
+        tagName: 'xtal-side-nav',
+        propDefaults: {
+            open: false,
+            updateTransform: {
+                sideNavParts: [{},{},{'data-open':'open'}]
             }
         }
     }
-} as mib}>
+}
+const innerHTML = html`
 <template be-active>
     <script id=be-noticed/be-noticed.js></script>
 </template>
@@ -81,8 +80,12 @@ const template = html`
     }
 } 
 </style>
-</template>
 
 `;
 
-define(template, console.log);
+define({
+    innerHTML,
+    mode,
+    beDefinitiveProps,
+    encodeAndWrite: console.log,
+})

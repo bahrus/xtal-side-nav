@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
     "doc": "custom-elements-manifest analyze",
-    "build": "copy xsn-config.js xsn-config.mjs && node xsn-config.mjs > xtal-side-nav.js",
+    "build": "copy xsn-config.js xsn-config.mjs && node xsn-config.mjs -js > xtal-side-nav.js",
     "watch": "npm-watch"
   },
   "watch": {
@@ -43,7 +43,7 @@
     "be-hive": "0.0.16",
     "be-loaded": "0.0.27",
     "be-noticed": "0.0.41",
-    "may-it-be": "0.0.12"
+    "may-it-be": "0.0.13"
   },
   "devDependencies": {
     "@skypack/package-check": "0.2.2",

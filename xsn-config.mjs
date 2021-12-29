@@ -1,18 +1,17 @@
 import { html, define } from 'may-it-be/index.js';
-const template = html `
-<template ${{
-    beDefinitive: {
-        config: {
-            tagName: 'xtal-side-nav',
-            propDefaults: {
-                open: false,
-                updateTransform: {
-                    sideNavParts: [{}, {}, { 'data-open': 'open' }]
-                }
+const mode = process.argv[2];
+const beDefinitiveProps = {
+    config: {
+        tagName: 'xtal-side-nav',
+        propDefaults: {
+            open: false,
+            updateTransform: {
+                sideNavParts: [{}, {}, { 'data-open': 'open' }]
             }
         }
     }
-}}>
+};
+const innerHTML = html `
 <template be-active>
     <script id=be-noticed/be-noticed.js></script>
 </template>
@@ -80,7 +79,11 @@ const template = html `
     }
 } 
 </style>
-</template>
 
 `;
-define(template, console.log);
+define({
+    innerHTML,
+    mode,
+    beDefinitiveProps,
+    encodeAndWrite: console.log,
+});
