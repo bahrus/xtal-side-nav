@@ -34,10 +34,10 @@ There's the easy way and the hard way to embed the light children.
 
 ### The easy way:
 
-The html provides two placeholders for inserting attributes and children:  -attribs for attributes and may-it-be for the light children:
+The html provides two placeholders for inserting attributes and children:  -mibs for attributes and may-it-be for the light children:
 
 ```html
-<xtal-side-nav -attribs be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
+<xtal-side-nav -mibs be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
     <may-it-be></may-it-be>
     ...
 </xtal-side-nav>
