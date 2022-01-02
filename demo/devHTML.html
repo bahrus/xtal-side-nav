@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=preload as=fetch crossorigin="anonymous" id=xtal-side-nav/xtal-side-nav.html href=../xtal-side-nav.html>
+</head>
+<body>
+    <xtal-side-nav be-importing=xtal-side-nav/xtal-side-nav.html>
+        <h3 style="color:white">Test</h3>
+    </xtal-side-nav>
+    <script type=importmap>
+        {
+            "imports": {
+                "trans-render/": "../node_modules/trans-render/",
+                "xodus/": "../node_modules/xodus/",
+                "on-to-me/": "../node_modules/on-to-me/",
+                "be-active/": "../node_modules/be-active/",
+                "be-decorated/": "../node_modules/be-decorated/",
+                "be-definitive/": "../node_modules/be-definitive/",
+                "be-fruitful/": "../node_modules/be-fruitful/",
+                "be-hive/": "../node_modules/be-hive/",
+                "be-importing/": "../node_modules/be-importing/",
+                "be-observant/": "../node_modules/be-observant/",
+                "be-noticed/": "../node_modules/be-noticed/",
+                "xtal-decor/": "../node_modules/xtal-decor/",
+                "xtal-element/": "../node_modules/xtal-element/"
+            }
+        }
+    </script>
+    <script type=module>
+        import 'be-importing/be-importing.js';
+    </script>
+</body>
+</html>
