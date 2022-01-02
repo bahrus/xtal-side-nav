@@ -34,35 +34,35 @@ There's the easy way and the hard way to embed the light children.
 
 ### The easy way:
 
-The html provides two placeholders for inserting attributes and children:  -mibs for attributes and may-it-be for the light children:
+The html provides two placeholders for inserting attributes and children:  t-a-i-l-b for attributes and \<!----\> for the light children:
 
 ```html
-<xtal-side-nav -mibs be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
-    <may-it-be></may-it-be>
+<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
+    <!---->
     ...
 </xtal-side-nav>
 ```
 
-may-it-be is the library that creates the SSR HTML, so that is why the name was chosen.
+t-a-i-l-b stands for "this attribute intentionally left blank".  So a string search and replace with the desired attributes can be done quite easily.  Likewise with the comment magic string.
 
 So the easy way -- the server side stream retrieves a (cached) copy of the xtal-side-nav.html file, and simply does a string replace call, searching for a single:
 
 ```html
-<may-it-be></may-it-be>
+<!---->
 ```
 
 tag, and replace it with the desired light children, the contents of the drawer in this case.
 
-The downside is you will have to retrieve the whole html string before doing the replace.
+Likewise with t-a-i-l-b, for setting any attributes.
+
+Simple, effective, but not very elegant, and may thwart the ability to utilize streaming.
 
 ### The hard way
 
-Same idea, but use something like [HTMLRewriting](https://developers.cloudflare.com/workers/runtime-apis/html-rewriter) to embed the light children in the SSR HTML.  
-
-If using such a tool, use the "replace" method after subscribing to "may-it-be" elements. 
+Same idea, but use something like [HTMLRewriting](https://developers.cloudflare.com/workers/runtime-apis/html-rewriter) to embed the light children in the SSR HTML.   
 
 A project called xodus is underway to help make this easier.
 
-The advantage here is the html of the embedded web component could be streamed.
+The advantage here is the html of the embedded web component could be easily streamed.
 
 <!-- https://codepen.io/bahrus/pen/yLzPZRN -->
