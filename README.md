@@ -15,7 +15,7 @@ xtal-side-nav is an out-of-the-box SSR web component.
     import  'https://esm.run/xtal-side-nav/xtal-side-nav.js';
     ```
 
-unpkg.com, cdn.skypack.net not working currently.  I eagerly wait when they do.
+unpkg.com, cdn.skypack.net not working currently.  I eagerly await for them to upgrade so they do.
 
 3.  Embedded HTML (SSR):
       1.  If using server side rendering, embed this HTML text in your stream where the first instance needs to go:  https://cdn.jsdelivr.net/npm/xtal-side-nav/xtal-side-nav.html or https://unpkg.com/xtal-side-nav/xtal-side-nav.html.  The latter actually opens in your browser, so that's the demo!  Requires declarative [ShadowDOM polyfill for Firefox / Safari](https://web.dev/declarative-shadow-dom/#detection-support).  Additional instances would be best served by simply including the tag name in the stream, with the light children.  See discussion below for inserting the light children in the first instance. How you embed the HTML text is up to you, of course (file injection from node_modules folder, cacheable CDN fetch, etc.).
@@ -24,7 +24,7 @@ unpkg.com, cdn.skypack.net not working currently.  I eagerly wait when they do.
 
 4.  Web Component Header Info [TODO]
 
-Similar in spirit to a c/c++ header file, this package also provides a xtal-side-nav-h.json file that replicates some of the information in the html file, but it is JSON, so easier to parse, and it is small, so retrieving and loading into memory should not affect your CPU billing cycle much, and is unlikely to change from version to version (only adding more values, most likely).
+Similar in spirit to a c/c++ header file, this package also provides a xtal-side-nav-h.json file that replicates some of the information in the html file, but it is JSON, so easier to parse from a V8 process like a CloudWorker, and it is small, so retrieving and loading into memory should not affect your CPU billing cycle much. It is unlikely to change from version to version (only adding more values, most likely).
 
 This header file provides the ability to create an efficient HTMLRewriter for server-side rendering, as it provides some key information regarding which tags to look out for (in particular, which css queries to add to the 'on' method).
 
