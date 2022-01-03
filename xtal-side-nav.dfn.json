@@ -1,1 +1,1 @@
-{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["part=[\\\"side-nav\\\"]"]}}
+{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}
