@@ -9,7 +9,8 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
             updateTransform: {
                 sideNavParts: [{},{},{'data-open':'open'}]
             }
-        }
+        },
+        keyQueries:['[part="side-nav"]'],
     }
 }
 const innerHTML = html`

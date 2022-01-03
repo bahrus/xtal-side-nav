@@ -7,10 +7,9 @@ const beDefinitiveProps = {
             open: false,
             updateTransform: {
                 sideNavParts: [{}, {}, { 'data-open': 'open' }]
-            },
-            
+            }
         },
-        keyQueries:['[part="side-nav-part"]'],
+        keyQueries: ['[part="side-nav"]'],
     }
 };
 const innerHTML = html `

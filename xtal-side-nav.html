@@ -1,13 +1,5 @@
 
-<script type=module>
-    if(customElements.get('be-active') === undefined){
-        import('be-active/be-active.js').catch(err => {
-            import('https://esm.run/be-active/be-active.js');
-        });
-    }
-</script>
-
-<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
+<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["[part=\"side-nav\"]"]}}'>
     <!---->
     <template shadowroot="open">
         <template be-active>
@@ -80,4 +72,11 @@
 
     </template>
 </xtal-side-nav>
+<script type=module>
+    if(customElements.get('be-active') === undefined){
+        import('be-active/be-active.js').catch(err => {
+            import('https://esm.run/be-active/be-active.js');
+        });
+    }
+</script>
 

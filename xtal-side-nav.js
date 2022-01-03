@@ -1,7 +1,7 @@
 import('be-definitive/be-definitive.js');
 import('be-active/be-active.js');
 
-document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}}}}'>
+document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"updateTransform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["[part=\"side-nav\"]"]}}'>
 <template be-active>
     <script id=be-noticed/be-noticed.js></script>
 </template>
