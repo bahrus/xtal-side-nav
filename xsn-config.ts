@@ -10,9 +10,9 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
                 sideNavParts: [{},{},{'data-open':'open'}]
             }
         },
-        keyQueries:['[part="side-nav"]'],
+        keyQueries:['part=\\"side-nav\\"]'],
     }
-}
+};
 const innerHTML = html`
 <template be-active>
     <script id=be-noticed/be-noticed.js></script>

@@ -24,9 +24,14 @@ unpkg.com, cdn.skypack.net not working currently.  I eagerly await for them to u
 
 4.  Web Component Header Info [TODO]
 
-Similar in spirit to a c/c++ header file, this package also provides a xtal-side-nav-h.json file that replicates some of the information in the html file, but it is JSON, so easier to parse from a V8 process like a CloudWorker.  It is also quite small, so retrieving and loading into memory should not affect your CPU billing cycle much. It is unlikely to change from version to version (only adding more values, most likely).  Plus it can be imported thanks to support for JSON imports
+Similar in spirit to a c/c++ header file, this package also provides a xtal-side-nav.defn.json file that replicates some of the information in the html file, but:
 
-This header file provides the ability to create an efficient HTMLRewriter for server-side rendering, as it provides some key information regarding which tags to look out for (in particular, which css queries to add to the 'on' method).
+1.  It is JSON, so easier to parse from a V8 process like a CloudFlare Worker.  
+2.  It is also quite small, so retrieving and loading into memory should not affect your CPU billing cycle much. 
+3.  It is unlikely to change from version to version (only adding more values, most likely).  
+4.  It can be elegantly imported from the npm package thanks to support for JSON imports
+
+This header is referred to as the definition file, hence the defn.json file extension.  It provides the ability to create an efficient HTMLRewriter for server-side rendering, as it provides some key information regarding which tags to look out for (in particular, which css queries to add to the 'on' method).
 
 ## Setting the drawer content.
 
