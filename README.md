@@ -22,7 +22,7 @@ unpkg.com, cdn.skypack.net not working currently.  I eagerly await for them to u
       2.  Alternatively, on the client side, use a client-side include, like Jquery's [load](https://api.jquery.com/load/) method, [k-fetch](https://github.com/bahrus/k-fetch), [include-fragment-element](https://github.com/github/include-fragment-element), [sl-include](https://shoelace.style/components/include), [templ-mount](https://github.com/bahrus/templ-mount), [xtal-fetch](https://github.com/bahrus/xtal-fetch), [html-includes](https://www.filamentgroup.com/lab/), [wc-include](https://www.npmjs.com/package/@vanillawc/wc-include), [ng-include](https://www.w3schools.com/angular/ng_ng-include.asp), [html-include-element](https://www.npmjs.com/package/html-include-element) or countless other ought-to-be-built-into-the-platform-already-but-isnt options. and set src (or href) to https://jsdelivr.com/npm/xtal-side-nav/xtal-side-nav.html.  However, inserting the light children with these solutions could be a bit of a hurdle.
       3.  [be-importing](https://github.com/bahrus/be-importing) makes integrating the light children much easier when adopting client-side integration.
 
-4.  Web Component Header Info [TODO]
+4.  Web Component Header Info
 
 Similar in spirit to a c/c++ header file, this package also provides a xtal-side-nav.defn.json file that replicates some of the information in the html file, but:
 
@@ -66,7 +66,7 @@ So the easy way -- the server side stream retrieves a (cached) copy of the xtal-
 <!---->
 ```
 
-tag, and replace it with the desired light children, the contents of the drawer in this case.  In the rare cases you would want the drawer open on page load, replace t-a-i-l-b with "open".
+tag, and replaces it with the desired light children, the contents of the drawer in this case.  In the rare cases you would want the drawer open on page load, replace t-a-i-l-b with "open".
 
 Simple, effective, but not very elegant, and may thwart the ability to utilize streaming.
 
