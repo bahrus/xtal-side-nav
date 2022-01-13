@@ -1,19 +1,17 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"module":"esnext",
+		"target": "ESNext",
+		"module":"ESNext",
 		"sourceMap": false,
-		"experimentalDecorators": true,
+		"experimentalDecorators": false,
 		"strict": true,
 		"newLine": "LF",
 		"watch": true
 	},
 	"files": [
-		"xsn-config.ts"
+		"xsn-config.mts"
 	],
 	"exclude":[
-		"build",
-		"bower_components",
 		"node_modules"
 	]
 

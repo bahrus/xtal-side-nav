@@ -25,32 +25,37 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
     "doc": "custom-elements-manifest analyze",
-    "build": "copy xsn-config.js xsn-config.mjs && node xsn-config.mjs -dfn > xtal-side-nav.dfn.json && node xsn-config.mjs -js > xtal-side-nav.js && node xsn-config.mjs -html > xtal-side-nav.html",
+    "build-dfn": "node xsn-config.mjs -dfn > xtal-side-nav.dfn.json",
+    "build-js": "node xsn-config.mjs -js > xtal-side-nav.js",
+    "build-html": "xsn-config.mjs -html > xtal-side-nav.html",
     "watch": "npm-watch"
   },
   "watch": {
-    "build": "*-config.js"
+    "build-dfn": "*-config.mjs",
+    "build-js": "*-config.mjs",
+    "build-html": "*-config.mjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "trans-render": "0.0.445",
-    "on-to-me": "0.0.49",
     "be-active": "0.0.14",
     "be-definitive": "0.0.26",
     "be-hive": "0.0.17",
     "be-loaded": "0.0.32",
     "be-noticed": "0.0.45",
-    "may-it-be": "0.0.22"
+    "may-it-be": "0.0.22",
+    "on-to-me": "0.0.49",
+    "trans-render": "0.0.445",
+    "typescript": "^4.6.0-dev.20220113"
   },
   "devDependencies": {
-    "@skypack/package-check": "0.2.2",
-    "xtal-test": "0.0.54",
     "@custom-elements-manifest/analyzer": "0.5.7",
+    "@skypack/package-check": "0.2.2",
+    "be-importing": "0.0.1",
     "npm-watch": "0.11.0",
-    "be-importing": "0.0.1"
+    "xtal-test": "0.0.54"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
