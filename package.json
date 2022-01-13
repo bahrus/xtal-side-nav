@@ -27,7 +27,7 @@
     "doc": "custom-elements-manifest analyze",
     "build-dfn": "node xsn-config.mjs -dfn > xtal-side-nav.dfn.json",
     "build-js": "node xsn-config.mjs -js > xtal-side-nav.js",
-    "build-html": "xsn-config.mjs -html > xtal-side-nav.html",
+    "build-html": "node xsn-config.mjs -html > xtal-side-nav.html",
     "watch": "npm-watch"
   },
   "watch": {
