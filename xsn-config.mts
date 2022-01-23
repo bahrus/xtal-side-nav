@@ -89,4 +89,4 @@ define({
     mode,
     beDefinitiveProps,
     encodeAndWrite: console.log,
-})
+});
