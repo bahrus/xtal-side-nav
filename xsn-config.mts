@@ -6,7 +6,7 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
         tagName: 'xtal-side-nav',
         propDefaults: {
             open: false,
-            updateTransform: {
+            transform: {
                 sideNavParts: [{},{},{'data-open':'open'}]
             }
         },
