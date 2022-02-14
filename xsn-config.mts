@@ -15,7 +15,7 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
 };
 const innerHTML = html`
 <template be-active>
-    <script id=be-noticed/be-noticed.js></script>
+    <script data-version=0.0.51 id=be-noticed/be-noticed.js></script>
 </template>
 <button aria-label="Open Menu" part=opener class=opener ${{
     beNoticed:{

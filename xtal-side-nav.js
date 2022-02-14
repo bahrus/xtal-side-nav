@@ -3,7 +3,7 @@ import('be-active/be-active.js');
 
 document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
 <template be-active>
-    <script id=be-noticed/be-noticed.js></script>
+    <script data-version=0.0.51 id=be-noticed/be-noticed.js></script>
 </template>
 <button aria-label="Open Menu" part=opener class=opener be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav>
