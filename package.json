@@ -40,7 +40,7 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-active": "0.0.22",
+    "be-active": "0.0.23",
     "be-definitive": "0.0.38",
     "be-hive": "0.0.31",
     "be-loaded": "0.0.48",
