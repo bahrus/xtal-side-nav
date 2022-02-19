@@ -1,13 +1,10 @@
 import('be-definitive/be-definitive.js');
 import('be-active/be-active.js');
 
-document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":{"sideNavParts":[{},{},{"data-open":"open"}]}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
-<template be-active>
-    <script data-version=0.0.51 id=be-noticed/be-noticed.js></script>
-</template>
-<button aria-label="Open Menu" part=opener class=opener be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&#9776; <slot name=title></slot></button>
+document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{},{"click":{"prop":"open","toggleProp":true}}]},{"sideNavParts":[{},{},{"data-open":"open"}]}]},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+<button aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav>
-    <button aria-label="Close Menu" part=close-btn be-noticed='{"click":{"prop":"open","toggleProp":true}}'>&times;</button>
+    <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
 </div>
 <be-hive></be-hive>

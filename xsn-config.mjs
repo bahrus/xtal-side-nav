@@ -5,26 +5,22 @@ const beDefinitiveProps = {
         tagName: 'xtal-side-nav',
         propDefaults: {
             open: false,
-            transform: {
-                sideNavParts: [{}, {}, { 'data-open': 'open' }]
-            }
+            transform: [
+                {
+                    buttonElements: [{}, { click: { prop: 'open', toggleProp: true } }],
+                },
+                {
+                    sideNavParts: [{}, {}, { 'data-open': 'open' }]
+                }
+            ]
         },
         keyQueries: ['[part=\\"side-nav\\"]'],
     }
 };
 const innerHTML = html `
-<template be-active>
-    <script data-version=0.0.51 id=be-noticed/be-noticed.js></script>
-</template>
-<button aria-label="Open Menu" part=opener class=opener ${{
-    beNoticed: {
-        click: { prop: 'open', toggleProp: true }
-    }
-}}>&#9776; <slot name=title></slot></button>
+<button aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav>
-    <button aria-label="Close Menu" part=close-btn ${{
-    beNoticed: { click: { prop: 'open', toggleProp: true } }
-}}>&times;</button>
+    <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
 </div>
 <be-hive></be-hive>
