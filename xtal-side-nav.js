@@ -1,8 +1,8 @@
 import('be-definitive/be-definitive.js');
 import('be-active/be-active.js');
 
-document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{},{"click":{"prop":"open","toggleProp":true}}]},{"sideNavParts":[{},{},{"data-open":"open"}]}]},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
-<button aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
+document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"sideNavParts":[{},{},{"data-open":"open"}]}]},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+<button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav>
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>

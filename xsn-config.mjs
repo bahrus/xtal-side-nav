@@ -7,7 +7,7 @@ const beDefinitiveProps = {
             open: false,
             transform: [
                 {
-                    buttonElements: [{}, { click: { prop: 'open', toggleProp: true } }],
+                    buttonElements: [{ disabled: false }, { click: { prop: 'open', toggleProp: true } }],
                 },
                 {
                     sideNavParts: [{}, {}, { 'data-open': 'open' }]
@@ -18,7 +18,7 @@ const beDefinitiveProps = {
     }
 };
 const innerHTML = html `
-<button aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
+<button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
 <div part=side-nav class=side-nav>
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
