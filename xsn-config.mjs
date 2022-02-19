@@ -23,9 +23,7 @@ const innerHTML = html `
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
 </div>
-<be-hive></be-hive>
-
-<style>
+<style be-adopted>
 :host {
     display: block;
     --drawer-width:250px;
@@ -76,8 +74,7 @@ const innerHTML = html `
     }
 } 
 </style>
-
-`;
+<be-hive></be-hive>`;
 define({
     innerHTML,
     mode,

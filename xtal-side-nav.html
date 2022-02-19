@@ -14,9 +14,7 @@
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
 </div>
-<be-hive></be-hive>
-
-<style>
+<style be-adopted>
 :host {
     display: block;
     --drawer-width:250px;
@@ -67,8 +65,7 @@
     }
 } 
 </style>
-
-
+<be-hive></be-hive>
     </template>
 </xtal-side-nav>
 

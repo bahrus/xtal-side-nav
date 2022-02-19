@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "be-active": "0.0.22",
-    "be-definitive": "0.0.37",
+    "be-definitive": "0.0.38",
     "be-hive": "0.0.31",
     "be-loaded": "0.0.48",
     "be-noticed": "0.0.53",

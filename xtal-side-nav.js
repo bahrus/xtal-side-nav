@@ -7,9 +7,7 @@ document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
 </div>
-<be-hive></be-hive>
-
-<style>
+<style be-adopted>
 :host {
     display: block;
     --drawer-width:250px;
@@ -60,5 +58,4 @@ document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config
     }
 } 
 </style>
-
-</template>`);
+<be-hive></be-hive></template>`);
