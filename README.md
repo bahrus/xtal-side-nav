@@ -4,6 +4,8 @@ Side nav (drawer) web component.
 
 xtal-side-nav is an out-of-the-box SSR web component.
 
+## [API](https://cf-sw.bahrus.workers.dev/?href=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fxtal-side-nav%2Fcustom-elements.json&stylesheet=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fwc-info%2Fsimple-ce-style.css&embedded=false&tags=&ts=2022-03-12T16%3A27%3A41.424Z&tocXSLT=https%3A%2F%2Fcdn.jsdelivr.net%2Fnpm%2Fwc-info%2Ftoc.xsl)
+
 ## Ways to reference / Artifacts:
 
 1.  ES6 module (local, bare specifier):
