@@ -9,7 +9,8 @@
 		"watch": true
 	},
 	"files": [
-		"xsn-config.mts"
+		"xsn-config.mts",
+		"doc.mts"
 	],
 	"exclude":[
 		"node_modules"

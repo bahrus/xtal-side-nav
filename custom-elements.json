@@ -4,21 +4,27 @@
   "modules": [
     {
       "kind": "javascript-module",
-      "path": "types.d.ts",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "xtal-side-nav.js",
-      "declarations": [],
-      "exports": []
-    },
-    {
-      "kind": "javascript-module",
-      "path": "xtal-side-nav.ts",
-      "declarations": [],
-      "exports": []
+      "path": "./xtal-side-nav.js",
+      "declarations": [
+        {
+          "tagName": "xtal-side-nav",
+          "name": "XtalSideNaveInfo",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "open",
+              "description": "indicates if side nav is (or should be) open or not."
+            }
+          ],
+          "attributes": [
+            {
+              "name": "open",
+              "description": "indicates if side nav is (or should be) open or not."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

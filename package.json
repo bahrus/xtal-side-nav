@@ -24,16 +24,17 @@
     "serve": "node node_modules/xtal-test/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
-    "doc": "custom-elements-manifest analyze",
     "build-dfn": "node xsn-config.mjs -dfn > xtal-side-nav.dfn.json",
     "build-js": "node xsn-config.mjs -js > xtal-side-nav.js",
     "build-html": "node xsn-config.mjs -html > xtal-side-nav.html",
+    "build-manifest": "node doc.mjs > custom-elements.json",
     "watch": "npm-watch"
   },
   "watch": {
     "build-dfn": "*-config.mjs",
     "build-js": "*-config.mjs",
-    "build-html": "*-config.mjs"
+    "build-html": "*-config.mjs",
+    "build-manifest": "types.d.ts"
   },
   "repository": {
     "type": "git",
