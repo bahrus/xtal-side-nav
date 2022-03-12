@@ -22,6 +22,20 @@
               "name": "open",
               "description": "indicates if side nav is (or should be) open or not."
             }
+          ],
+          "cssParts": [
+            {
+              "name": "side-nav",
+              "description": "drawer element that opens up"
+            },
+            {
+              "name": "opener",
+              "description": "button that opens up the drawer"
+            },
+            {
+              "name": "close-btn",
+              "description": "button that closes the drawer"
+            }
           ]
         }
       ]
