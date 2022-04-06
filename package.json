@@ -41,21 +41,20 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-active": "0.0.27",
-    "be-definitive": "0.0.42",
-    "be-hive": "0.0.36",
-    "be-loaded": "0.0.51",
-    "be-noticed": "0.0.57",
-    "may-it-be": "0.0.145",
-    "trans-render": "0.0.511"
+    "be-active": "0.0.28",
+    "be-definitive": "0.0.43",
+    "be-hive": "0.0.38",
+    "be-loaded": "0.0.52",
+    "be-noticed": "0.0.58",
+    "may-it-be": "0.0.146",
+    "trans-render": "0.0.518"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.5.7",
     "@skypack/package-check": "0.2.2",
-    "be-importing": "0.0.22",
+    "be-importing": "0.0.23",
     "npm-watch": "0.11.0",
-    "xtal-test": "0.0.55",
-    "typescript": "^4.6.0-dev.20220113"
+    "xtal-test": "0.0.56"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",

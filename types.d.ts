@@ -6,6 +6,10 @@ export interface XtalSideNaveProps {
      */
     open: boolean;
     
+    /**
+     * Specify whether drawer should open left to right or right to left.
+     * Default:  ltr
+     */
     mode: 'rtl' | 'ltr';
 }
 

@@ -18,7 +18,8 @@
             },
             {
               "kind": "field",
-              "name": "mode"
+              "name": "mode",
+              "description": "Specify whether drawer should open left to right or right to left.\nDefault:  ltr"
             }
           ],
           "attributes": [
@@ -27,7 +28,8 @@
               "description": "indicates if side nav is (or should be) open or not."
             },
             {
-              "name": "mode"
+              "name": "mode",
+              "description": "Specify whether drawer should open left to right or right to left.\nDefault:  ltr"
             }
           ],
           "cssParts": [
