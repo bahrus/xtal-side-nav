@@ -11,19 +11,20 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
                     buttonElements: [{disabled: false},{click:{prop:'open', toggleProp: true}}],
                 },
                 {
-                    sideNavParts: [{},{},{'data-open':'open'}]
+                    asideElements: [{},{},{'data-open':'open', 'data-mode':'mode'}],
                 }
-            ]       
+            ],
+            mode: 'ltr'       
         },
         keyQueries:['[part=\\"side-nav\\"]'],
     }
 };
 const innerHTML = html`
 <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
-<div part=side-nav class=side-nav>
+<aside part=side-nav class=side-nav>
     <button aria-label="Close Menu" part=close-btn>&times;</button>
     <slot id="slot"></slot>
-</div>
+</aside>
 <style be-adopted>
 :host {
     display: block;
@@ -38,13 +39,20 @@ const innerHTML = html`
     flex-direction:column;
     z-index: 10;
     top: 0;
-    left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
-
+.side-nav[data-mode="ltr"]{
+    left: 0;
+}
+.side-nav[data-mode="rtl"]{
+    right: 0;
+}
+/*
+TODO:  use FLIP?
+*/
 .side-nav[data-open]{
     width: var(--drawer-width);
 }

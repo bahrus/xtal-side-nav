@@ -1,1 +1,1 @@
-{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"sideNavParts":[{},{},{"data-open":"open"}]}]},"keyQueries":["[part=\\\"side-nav\\\"]"]}}
+{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"asideElements":[{},{},{"data-open":"open","data-mode":"mode"}]}],"mode":"ltr"},"keyQueries":["[part=\\\"side-nav\\\"]"]}}

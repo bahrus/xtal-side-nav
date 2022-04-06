@@ -4,7 +4,9 @@ export interface XtalSideNaveProps {
     /**
      * indicates if side nav is (or should be) open or not.
      */
-    open: boolean;    
+    open: boolean;
+    
+    mode: 'rtl' | 'ltr';
 }
 
 /**

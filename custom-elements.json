@@ -15,12 +15,19 @@
               "kind": "field",
               "name": "open",
               "description": "indicates if side nav is (or should be) open or not."
+            },
+            {
+              "kind": "field",
+              "name": "mode"
             }
           ],
           "attributes": [
             {
               "name": "open",
               "description": "indicates if side nav is (or should be) open or not."
+            },
+            {
+              "name": "mode"
             }
           ],
           "cssParts": [
