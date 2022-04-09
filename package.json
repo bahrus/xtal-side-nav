@@ -42,11 +42,11 @@
   },
   "dependencies": {
     "be-active": "0.0.29",
-    "be-definitive": "0.0.47",
+    "be-definitive": "0.0.48",
     "be-hive": "0.0.39",
     "be-loaded": "0.0.53",
     "be-noticed": "0.0.61",
-    "may-it-be": "0.0.148",
+    "may-it-be": "0.0.149",
     "trans-render": "0.0.525"
   },
   "devDependencies": {
