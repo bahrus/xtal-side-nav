@@ -47,7 +47,7 @@
     "be-loaded": "0.0.53",
     "be-noticed": "0.0.61",
     "may-it-be": "0.0.148",
-    "trans-render": "0.0.524"
+    "trans-render": "0.0.525"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.5.7",
