@@ -16,10 +16,14 @@ document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config
     --drawer-width:250px;
 }
 
+main {
+    position: relative;
+}
+
 .side-nav {
     height: 100%;
     width: 0;
-    position: fixed;
+    position: absolute;
     display:flex;
     flex-direction:column;
     z-index: 10;
