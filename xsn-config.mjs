@@ -31,6 +31,7 @@ const innerHTML = html `
 :host {
     display: block;
     --drawer-width:250px;
+    --side-nav-position:fixed;
 }
 
 main {
@@ -38,9 +39,8 @@ main {
 }
 
 .side-nav {
-    /* height: calc(100vh - 80px); */
     width: 0;
-    position: fixed;
+    position: var(--side-nav-position);
     display:flex;
     flex-direction:column;
     z-index: 10;
