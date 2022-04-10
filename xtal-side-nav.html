@@ -28,23 +28,24 @@ main {
 }
 
 .side-nav {
-    height: calc(100vh - 80px);
+    /* height: calc(100vh - 80px); */
     width: 0;
-    position: absolute;
+    position: fixed;
     display:flex;
     flex-direction:column;
     z-index: 10;
-    top: 0;
+    top: inherit;
+    left: inherit;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 .side-nav[data-mode="ltr"]{
-    left: 0;
+    left: 8px;
 }
 .side-nav[data-mode="rtl"]{
-    right: 0;
+    right: 8px;
 }
 /*
 TODO:  use FLIP?
