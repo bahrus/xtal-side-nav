@@ -20,11 +20,14 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
     }
 };
 const innerHTML = html`
-<button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
-<aside part=side-nav class=side-nav>
-    <button aria-label="Close Menu" part=close-btn>&times;</button>
-    <slot id="slot"></slot>
-</aside>
+<main part=main>
+    <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
+    <aside part=side-nav class=side-nav>
+        <button aria-label="Close Menu" part=close-btn>&times;</button>
+        <slot id="slot"></slot>
+    </aside>
+</main>
+
 <style be-adopted>
 :host {
     display: block;
@@ -34,7 +37,7 @@ const innerHTML = html`
 .side-nav {
     height: 100%;
     width: 0;
-    position: absolute;
+    position: fixed;
     display:flex;
     flex-direction:column;
     z-index: 10;
