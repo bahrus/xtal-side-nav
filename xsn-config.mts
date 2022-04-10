@@ -39,7 +39,7 @@ main {
 }
 
 .side-nav {
-    height: 100%;
+    height: calc(100vh - 80px);
     width: 0;
     position: absolute;
     display:flex;
