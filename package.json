@@ -41,18 +41,18 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-active": "0.0.29",
+    "be-active": "0.0.30",
     "be-definitive": "0.0.50",
-    "be-hive": "0.0.39",
-    "be-loaded": "0.0.53",
-    "be-noticed": "0.0.61",
-    "may-it-be": "0.0.152",
+    "be-hive": "0.0.42",
+    "be-loaded": "0.0.54",
+    "be-noticed": "0.0.62",
+    "may-it-be": "0.0.153",
     "trans-render": "0.0.527"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.5.7",
     "@skypack/package-check": "0.2.2",
-    "be-importing": "0.0.23",
+    "be-importing": "0.0.25",
     "npm-watch": "0.11.0",
     "xtal-test": "0.0.56"
   },
