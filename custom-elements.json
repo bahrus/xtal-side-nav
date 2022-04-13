@@ -45,7 +45,9 @@
               "name": "close-btn",
               "description": "button that closes the drawer"
             }
-          ]
+          ],
+          "slots": [],
+          "events": []
         }
       ]
     }
