@@ -21,7 +21,7 @@
     "*.*"
   ],
   "scripts": {
-    "serve": "node node_modules/xtal-test/serve.js",
+    "serve": "node node_modules/may-it-serve/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
     "build-dfn": "node xsn-config.mjs -dfn > xtal-side-nav.dfn.json",
@@ -41,20 +41,20 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-active": "0.0.32",
-    "be-definitive": "0.0.54",
-    "be-hive": "0.0.44",
-    "be-loaded": "0.0.57",
-    "be-noticed": "0.0.64",
-    "may-it-be": "0.0.160",
-    "trans-render": "0.0.535"
+    "be-active": "0.0.33",
+    "be-definitive": "0.0.55",
+    "be-hive": "0.0.45",
+    "be-loaded": "0.0.58",
+    "be-noticed": "0.0.65",
+    "may-it-be": "0.0.161",
+    "trans-render": "0.0.536"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.5.7",
     "@skypack/package-check": "0.2.2",
     "be-importing": "0.0.26",
     "npm-watch": "0.11.0",
-    "xtal-test": "0.0.56"
+    "may-it-serve": "0.0.0"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",

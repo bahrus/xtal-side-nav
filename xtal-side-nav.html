@@ -1,10 +1,10 @@
 
-<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"asideElements":[{},{},{"data-open":"open","data-mode":"mode"}]}],"mode":"ltr"},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed"}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
     <!---->
     <template shadowroot="open">
         <template be-active>
             <script data-version=0.0.26 id="be-importing/be-importing.js"></script>
-            <script data-version=0.0.54 id="be-definitive/be-definitive.js" data-when=be-importing></script>
+            <script data-version=0.0.55 id="be-definitive/be-definitive.js" data-when=be-importing></script>
             
             
         </template>
@@ -73,6 +73,9 @@ TODO:  use FLIP?
     cursor:pointer
 }
 
+slot{
+    pointer-events: none;
+}
 
 @media screen and (max-height: 450px) {
     .side-nav {

@@ -5,15 +5,23 @@ const beDefinitiveProps = {
         tagName: 'xtal-side-nav',
         propDefaults: {
             open: false,
+            closed: true,
             transform: [
                 {
-                    buttonElements: [{ disabled: false }, { click: { prop: 'open', toggleProp: true } }],
+                    button: [{ disabled: false }, { click: { prop: 'open', toggleProp: true } }],
                 },
                 {
-                    asideElements: [{}, {}, { 'data-open': 'open', 'data-mode': 'mode' }],
+                    aside: [{}, {}, { 'data-open': 'open', 'data-mode': 'mode', inert: 'closed' }],
                 }
             ],
             mode: 'ltr'
+        },
+        propInfo: {
+            open: {
+                notify: {
+                    toggleTo: 'closed',
+                }
+            }
         },
         keyQueries: ['[part=\\"side-nav\\"]'],
     }
@@ -83,6 +91,9 @@ TODO:  use FLIP?
     cursor:pointer
 }
 
+slot{
+    pointer-events: none;
+}
 
 @media screen and (max-height: 450px) {
     .side-nav {

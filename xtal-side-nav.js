@@ -3,7 +3,7 @@ import('be-active/be-active.js');
 
 if(!document.body){
     document.addEventListener('DOMContentLoaded', () => {
-        document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"asideElements":[{},{},{"data-open":"open","data-mode":"mode"}]}],"mode":"ltr"},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+        document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed"}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>
@@ -68,6 +68,9 @@ TODO:  use FLIP?
     cursor:pointer
 }
 
+slot{
+    pointer-events: none;
+}
 
 @media screen and (max-height: 450px) {
     .side-nav {
@@ -78,7 +81,7 @@ TODO:  use FLIP?
 <be-hive></be-hive></template>`);
     });
 }else{
-    document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"transform":[{"buttonElements":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"asideElements":[{},{},{"data-open":"open","data-mode":"mode"}]}],"mode":"ltr"},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+    document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed"}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>
@@ -143,6 +146,9 @@ TODO:  use FLIP?
     cursor:pointer
 }
 
+slot{
+    pointer-events: none;
+}
 
 @media screen and (max-height: 450px) {
     .side-nav {
