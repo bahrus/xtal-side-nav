@@ -93,9 +93,6 @@ TODO:  use FLIP?
     cursor:pointer
 }
 
-slot{
-    pointer-events: none;
-}
 
 @media screen and (max-height: 450px) {
     .side-nav {
