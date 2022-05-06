@@ -21,6 +21,7 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
             open: {
                 notify:{
                     toggleTo: 'closed',
+                    dispatch: true,
                 }
             }
         },

@@ -20,6 +20,7 @@ const beDefinitiveProps = {
             open: {
                 notify: {
                     toggleTo: 'closed',
+                    dispatch: true,
                 }
             }
         },
