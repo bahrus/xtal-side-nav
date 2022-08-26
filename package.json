@@ -42,17 +42,17 @@
   },
   "dependencies": {
     "be-active": "0.0.37",
-    "be-definitive": "0.0.59",
-    "be-hive": "0.0.52",
-    "be-loaded": "0.0.69",
+    "be-definitive": "0.0.60",
+    "be-hive": "0.0.56",
+    "be-loaded": "0.0.70",
     "be-noticed": "0.0.67",
     "may-it-be": "0.0.164",
-    "trans-render": "0.0.562"
+    "trans-render": "0.0.576"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.4",
     "@skypack/package-check": "0.2.2",
-    "be-importing": "0.0.30",
+    "be-importing": "0.0.31",
     "npm-watch": "0.11.0",
     "may-it-serve": "0.0.2"
   },
