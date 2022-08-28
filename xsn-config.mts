@@ -1,7 +1,7 @@
 import {html, define} from 'may-it-be/index.js';
 import {MayItBe as mib, BeDefinitiveVirtualProps } from 'may-it-be/types';
 const mode = process.argv[2] as '-js' | '-html';
-const beDefinitiveProps: BeDefinitiveVirtualProps = {
+const beDefinitiveProps  = {
     config: {
         tagName: 'xtal-side-nav',
         propDefaults: {
@@ -27,7 +27,7 @@ const beDefinitiveProps: BeDefinitiveVirtualProps = {
         },
         keyQueries:['[part=\\"side-nav\\"]'],
     }
-};
+} as Partial<BeDefinitiveVirtualProps> as BeDefinitiveVirtualProps;
 const innerHTML = html`
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
