@@ -46,7 +46,7 @@
     "be-hive": "0.0.57",
     "be-loaded": "0.0.83",
     "be-noticed": "0.0.68",
-    "may-it-be": "0.0.166",
+    "may-it-be": "0.0.167",
     "trans-render": "0.0.578"
   },
   "devDependencies": {
