@@ -22,8 +22,8 @@ const beDefinitiveProps  = {
                 notify:{
                     toggleTo: 'closed',
                     dispatch: true,
-                    reflect: {
-                        asAttr: true,
+                    reflectTo: {
+                        dataAttr: true,
                     }
                 }
             }
