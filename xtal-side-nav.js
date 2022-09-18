@@ -3,7 +3,7 @@ import('be-active/be-active.js');
 
 if(!document.body){
     document.addEventListener('DOMContentLoaded', () => {
-        document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed","dispatch":true,"reflectTo":{"dataAttr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+        document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed","dispatch":true,"reflectTo":{"attr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>
@@ -78,7 +78,7 @@ TODO:  use FLIP?
 <be-hive></be-hive></template>`);
     });
 }else{
-    document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed","dispatch":true,"reflectTo":{"dataAttr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
+    document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed","dispatch":true,"reflectTo":{"attr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>

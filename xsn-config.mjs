@@ -22,7 +22,7 @@ const beDefinitiveProps = {
                     toggleTo: 'closed',
                     dispatch: true,
                     reflectTo: {
-                        dataAttr: true,
+                        attr: true
                     }
                 }
             }

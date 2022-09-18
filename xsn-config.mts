@@ -1,5 +1,5 @@
 import {html, define} from 'may-it-be/index.js';
-import {MayItBe as mib, BeDefinitiveVirtualProps } from 'may-it-be/types';
+import {MayItBe as mib, BeDefinitive } from 'may-it-be/types';
 const mode = process.argv[2] as '-js' | '-html';
 const beDefinitiveProps  = {
     config: {
@@ -23,14 +23,14 @@ const beDefinitiveProps  = {
                     toggleTo: 'closed',
                     dispatch: true,
                     reflectTo: {
-                        dataAttr: true,
+                        attr: true
                     }
                 }
             }
         },
         keyQueries:['[part=\\"side-nav\\"]'],
     }
-} as Partial<BeDefinitiveVirtualProps> as BeDefinitiveVirtualProps;
+} as  BeDefinitive;
 const innerHTML = html`
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
