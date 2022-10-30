@@ -102,8 +102,7 @@ TODO:  use FLIP?
         padding-top: 15px;
     }
 } 
-</style>
-<be-hive></be-hive>`;
+</style>`;
 
 define({
     innerHTML,

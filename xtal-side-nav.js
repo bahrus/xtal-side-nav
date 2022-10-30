@@ -74,8 +74,7 @@ TODO:  use FLIP?
         padding-top: 15px;
     }
 } 
-</style>
-<be-hive></be-hive></template>`);
+</style></template>`);
     });
 }else{
     document.body.insertAdjacentHTML('beforeend', `<template be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"transform":[{"button":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}]},{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]}],"mode":"ltr"},"propInfo":{"open":{"notify":{"toggleTo":"closed","dispatch":true,"reflectTo":{"attr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
@@ -149,6 +148,5 @@ TODO:  use FLIP?
         padding-top: 15px;
     }
 } 
-</style>
-<be-hive></be-hive></template>`);
+</style></template>`);
 }
