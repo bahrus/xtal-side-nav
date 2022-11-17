@@ -9,7 +9,8 @@ const beDefinitiveProps  = {
             closed: true,
             transform: [
                 {
-                    button: [{disabled: false},{click:{prop:'open', toggleProp: true}}],
+                    openerP: [{disabled: false},{click:{prop:'open', toggleProp: true}}],
+                    closeBtnP: [{}, {click:{prop: 'open', toggleProp: true}}]
                 },
                 {
                     aside: [{},{},{'data-open':'open', 'data-mode':'mode', inert:'closed'}],
@@ -20,7 +21,7 @@ const beDefinitiveProps  = {
         propInfo:{
             open: {
                 notify:{
-                    toggleTo: 'closed',
+                    negateTo: 'closed',
                     dispatch: true,
                     reflectTo: {
                         attr: true
