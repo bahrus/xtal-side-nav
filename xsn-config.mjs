@@ -91,7 +91,7 @@ TODO:  use FLIP?
     transition: 0.3s;
 }
 .opener{
-    font-size:30px;
+    /* font-size:30px; */
     cursor:pointer
 }
 

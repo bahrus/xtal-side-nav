@@ -39,7 +39,7 @@ const innerHTML = html`
     </aside>
 </main>
 
-<style be-adopted>
+<style adopt>
 :host {
     display: block;
     --drawer-width:250px;
@@ -92,7 +92,7 @@ TODO:  use FLIP?
     transition: 0.3s;
 }
 .opener{
-    font-size:30px;
+    /* font-size:30px; */
     cursor:pointer
 }
 

@@ -42,12 +42,12 @@
   },
   "dependencies": {
     "be-active": "0.0.46",
-    "be-definitive": "0.0.73",
+    "be-definitive": "0.0.74",
     "be-hive": "0.0.77",
     "be-loaded": "0.0.92",
     "may-it-be": "0.0.171",
-    "trans-render": "0.0.643",
-    "xtal-element": "0.0.538"
+    "trans-render": "0.0.644",
+    "xtal-element": "0.0.539"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.4",
