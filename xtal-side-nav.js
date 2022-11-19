@@ -21,6 +21,7 @@ if(!document.body){
 
 main {
     position: relative;
+    display: inherit;
 }
 
 .side-nav {
@@ -95,6 +96,7 @@ TODO:  use FLIP?
 
 main {
     position: relative;
+    display: inherit;
 }
 
 .side-nav {

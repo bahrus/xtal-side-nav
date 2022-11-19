@@ -48,6 +48,7 @@ const innerHTML = html`
 
 main {
     position: relative;
+    display: inherit;
 }
 
 .side-nav {
