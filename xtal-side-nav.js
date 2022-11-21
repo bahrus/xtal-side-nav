@@ -8,20 +8,29 @@ if(!document.body){
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>
         <button aria-label="Close Menu" part=close-btn>&times;</button>
-        <slot id="slot"></slot>
+        <section part=menu-section class=menu-section>
+            <slot id="slot"></slot>
+        </section>
     </aside>
 </main>
 
-<style be-adopted>
+<style adopt>
 :host {
-    display: block;
+    display: inherit;
     --drawer-width:250px;
     --side-nav-position:fixed;
+    --close-button-left: 50px;
 }
 
 main {
     position: relative;
     display: inherit;
+}
+
+.menu-section{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--close-button-left));
 }
 
 .side-nav {
@@ -35,7 +44,6 @@ main {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
 }
 .side-nav[data-mode="ltr"]{
     left: 8px;
@@ -60,8 +68,7 @@ TODO:  use FLIP?
     cursor:pointer;
     top: 0;
     right: 0px;
-    font-size: 36px;
-    margin-left: 50px;
+    margin-left: var(--close-button-left);
     transition: 0.3s;
 }
 .opener{
@@ -83,20 +90,29 @@ TODO:  use FLIP?
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
     <aside part=side-nav class=side-nav>
         <button aria-label="Close Menu" part=close-btn>&times;</button>
-        <slot id="slot"></slot>
+        <section part=menu-section class=menu-section>
+            <slot id="slot"></slot>
+        </section>
     </aside>
 </main>
 
-<style be-adopted>
+<style adopt>
 :host {
-    display: block;
+    display: inherit;
     --drawer-width:250px;
     --side-nav-position:fixed;
+    --close-button-left: 50px;
 }
 
 main {
     position: relative;
     display: inherit;
+}
+
+.menu-section{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--close-button-left));
 }
 
 .side-nav {
@@ -110,7 +126,6 @@ main {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
 }
 .side-nav[data-mode="ltr"]{
     left: 8px;
@@ -135,8 +150,7 @@ TODO:  use FLIP?
     cursor:pointer;
     top: 0;
     right: 0px;
-    font-size: 36px;
-    margin-left: 50px;
+    margin-left: var(--close-button-left);
     transition: 0.3s;
 }
 .opener{
