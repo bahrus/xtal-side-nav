@@ -40,5 +40,11 @@
     <script type=module>
         import '../xtal-side-nav.js';
     </script>
+    <script>
+        const x = document.querySelector('xtal-side-nav');
+        x.onbeforematch = () => {
+            console.log('iah');
+        }
+    </script>
 </body>
 </html>
