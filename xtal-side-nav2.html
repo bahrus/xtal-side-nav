@@ -1,8 +1,21 @@
-
-<xtal-side-nav t-a-i-l-b>
-    <!---->
+<script type=importmap>
+    {
+        "imports": {
+            "trans-render/": "../node_modules/trans-render/",
+            "xtal-element/": "../node_modules/xtal-element/",
+            "be-decorated/": "../be-decorated/",
+            "be-definitive/": "../be-definitive/",
+            "be-exportable/": "../node_modules/be-exportable/",
+            "be-having/": "../be-having/",
+            "be-hive/":  "../node_modules/be-hive/",
+            "be-observant/": "../node_modules/be-observant/",
+            "be-syndicating/": "../node_modules/be-syndicating/"
+        }
+    }
+</script>
+<xtal-side-nav>
     <template shadowroot="open">
-        <script be-having='{
+        <script nomodule type=module be-having='{
             "make": {
                 ":host": {
                     "be": "definitive",
@@ -28,21 +41,16 @@
                                         "reflectTo":{"attr":true}
                                     }
                                 }
-                            },
-                            "keyQueries":["[part=\\\"side-nav\\\"]"]
+                            }
                         }
                     }
                 }
             }
         }'>
-
+            export const definitive = {
+                impl: [() => import('be-definitive/be-definitive.js'), () => 'https://esm.run/be-definitive@0.0.80']
+            }
         </script>
-        <template be-active>
-            <script data-version=0.0.39 id="be-importing/be-importing.js"></script>
-            <script data-version=0.0.69 id="be-definitive/be-definitive.js" data-when=be-importing></script>
-            
-            
-        </template>
         
 <main part=main>
     <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
@@ -123,13 +131,14 @@ TODO:  use FLIP?
     }
 } 
 </style>
+    <be-hive></be-hive>
     </template>
 </xtal-side-nav>
 
 <script type=module>
-    if(customElements.get('be-active') === undefined){
-        import('be-active/be-active.js').catch(err => {
-            import('https://esm.run/be-active@0.0.44/be-active.js');
+    if(customElements.get('be-having') === undefined){
+        import('be-having/be-having.js').catch(err => {
+            import('https://esm.run/be-having@0.0.2');
         });
     }
 </script>

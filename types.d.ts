@@ -1,6 +1,6 @@
 import {SimpleWCInfo} from 'may-it-be/SimpleWCInfo';
 
-export interface XtalSideNaveProps {
+export interface XtalSideNavProps {
     /**
      * indicates if side nav is (or should be) open or not.
      */
@@ -19,7 +19,7 @@ export interface XtalSideNaveProps {
 export abstract class XtalSideNaveInfo implements SimpleWCInfo {
     src: './xtal-side-nav.js';
     tagName: 'xtal-side-nav';
-    props: XtalSideNaveProps;
+    props: XtalSideNavProps;
     cssParts: {
         sideNav: 'drawer element that opens up',
         opener: 'button that opens up the drawer',

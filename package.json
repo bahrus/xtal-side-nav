@@ -43,6 +43,7 @@
   "dependencies": {
     "be-active": "0.0.47",
     "be-definitive": "0.0.80",
+    "be-decorated": "0.0.210",
     "be-hive": "0.0.78",
     "be-loaded": "0.0.93",
     "may-it-be": "0.0.171",
