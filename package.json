@@ -14,7 +14,8 @@
   "module": "xtal-side-nav.js",
   "exports": {
     ".": "./xtal-side-nav.js",
-    "./xtal-side-nav.js": "./xtal-side-nav.js"
+    "./xtal-side-nav.js": "./xtal-side-nav.js",
+    "./make.js": "./make.js"
   },
   "types": "types.d.ts",
   "files": [

@@ -14,17 +14,11 @@
         }
     }
 </script> -->
-<script type=importmap>
-    {
-        "imports": {
-            "xtal-side-nav/": "../"
-        }
-    }
-</script>
 <xtal-side-nav>
+    <div>test of men</div>
     <template shadowroot="open">
         <script nomodule type=module be-having>
-            export const make = 'xtal-side-nav/make.js';
+            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.102/make.js'];
             export const definitive = {
                 impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.81']
             }
