@@ -42,14 +42,14 @@
   },
   "dependencies": {
     "be-active": "0.0.47",
-    "be-definitive": "0.0.80",
-    "be-decorated": "0.0.210",
+    "be-definitive": "0.0.81",
+    "be-decorated": "0.0.211",
     "be-hive": "0.0.78",
     "be-loaded": "0.0.93",
     "may-it-be": "0.0.171",
     "trans-render": "0.0.653",
-    "xtal-element": "0.0.546",
-    "be-having": "0.0.1"
+    "xtal-element": "0.0.547",
+    "be-having": "0.0.3"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.4",
