@@ -10,11 +10,10 @@
     "Editor"
   ],
   "description": "Side nav (drawer) web component.",
-  "main": "xtal-side-nav.js",
-  "module": "xtal-side-nav.js",
+  "main": "make.js",
+  "module": "make.js",
   "exports": {
-    ".": "./xtal-side-nav.js",
-    "./xtal-side-nav.js": "./xtal-side-nav.js",
+    ".": "./make.js",
     "./make.js": "./make.js"
   },
   "types": "types.d.ts",

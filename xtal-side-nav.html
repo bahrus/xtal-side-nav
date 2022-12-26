@@ -1,100 +1,101 @@
-
-<xtal-side-nav t-a-i-l-b be-definitive='{"config":{"tagName":"xtal-side-nav","propDefaults":{"open":false,"closed":true,"hydratingTransform":{"openerP":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}],"closeBtnP":[{},{"click":{"prop":"open","toggleProp":true}}]},"transform":{"aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]},"mode":"ltr"},"propInfo":{"open":{"notify":{"negateTo":"closed","dispatch":true,"reflectTo":{"attr":true}}}},"keyQueries":["[part=\\\"side-nav\\\"]"]}}'>
-    <!---->
+<xtal-side-nav>
     <template shadowroot="open">
-        <template be-active>
-            <script data-version=0.0.39 id="be-importing/be-importing.js"></script>
-            <script data-version=0.0.69 id="be-definitive/be-definitive.js" data-when=be-importing></script>
-            
-            
-        </template>
+        <script nomodule type=module be-having>
+            //export const make='.make.js';
+            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.102/make.js'];
+            export const definitive = {
+                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.81']
+            }
+        </script>
         
-<main part=main>
-    <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
-    <aside part=side-nav class=side-nav>
-        <button aria-label="Close Menu" part=close-btn>&times;</button>
-        <section part=menu-section class=menu-section>
-            <slot id="slot"></slot>
-        </section>
-    </aside>
-</main>
+        <main part=main>
+            <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
+            <aside part=side-nav class=side-nav>
+                <button aria-label="Close Menu" part=close-btn>&times;</button>
+                <section part=menu-section class=menu-section>
+                    <slot id="slot"></slot>
+                </section>
+            </aside>
+        </main>
 
-<style adopt>
-:host {
-    display: inherit;
-    --drawer-width:250px;
-    --side-nav-position:fixed;
-    --close-button-left: 50px;
-}
+        <style adopt>
+        :host {
+            display: inherit;
+            --drawer-width:250px;
+            --side-nav-position:fixed;
+            --close-button-left: 50px;
+        }
 
-main {
-    position: relative;
-    display: inherit;
-}
+        main {
+            position: relative;
+            display: inherit;
+        }
 
-.menu-section{
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - var(--close-button-left));
-}
+        .menu-section{
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - var(--close-button-left));
+        }
 
-.side-nav {
-    width: 0;
-    position: var(--side-nav-position);
-    display:flex;
-    flex-direction:column;
-    z-index: 10;
-    top: inherit;
-    left: inherit;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.side-nav[data-mode="ltr"]{
-    left: 8px;
-}
-.side-nav[data-mode="rtl"]{
-    right: 8px;
-}
-/*
-TODO:  use FLIP?
-*/
-.side-nav[data-open]{
-    width: var(--drawer-width);
-}
+        .side-nav {
+            width: 0;
+            position: var(--side-nav-position);
+            display:flex;
+            flex-direction:column;
+            z-index: 10;
+            top: inherit;
+            left: inherit;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+        .side-nav[data-mode="ltr"]{
+            left: 8px;
+        }
+        .side-nav[data-mode="rtl"]{
+            right: 8px;
+        }
+        /*
+        TODO:  use FLIP?
+        */
+        .side-nav[data-open]{
+            width: var(--drawer-width);
+        }
 
-.side-nav:not([data-open]){
-    width: 0px;
-    height:0px;
-}
+        .side-nav:not([data-open]){
+            width: 0px;
+            height:0px;
+        }
 
-.side-nav button {
-    position: absolute;
-    cursor:pointer;
-    top: 0;
-    right: 0px;
-    margin-left: var(--close-button-left);
-    transition: 0.3s;
-}
-.opener{
-    /* font-size:30px; */
-    cursor:pointer
-}
+        .side-nav button {
+            position: absolute;
+            cursor:pointer;
+            top: 0;
+            right: 0px;
+            margin-left: var(--close-button-left);
+            transition: 0.3s;
+        }
+        .opener{
+            /* font-size:30px; */
+            cursor:pointer
+        }
 
 
-@media screen and (max-height: 450px) {
-    .side-nav {
-        padding-top: 15px;
-    }
-} 
-</style>
+        @media screen and (max-height: 450px) {
+            .side-nav {
+                padding-top: 15px;
+            }
+        } 
+        </style>
+        <be-hive></be-hive>
     </template>
 </xtal-side-nav>
 
 <script type=module>
-    if(customElements.get('be-active') === undefined){
-        import('be-active/be-active.js').catch(err => {
-            import('https://esm.run/be-active@0.0.44/be-active.js');
+    if(customElements.get('be-having') === undefined){
+        import('be-having/be-having.js').catch(err => {
+            console.debug(err);
+            import('https://esm.run/be-having@0.0.3');
         });
     }
 </script>

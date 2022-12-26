@@ -9,7 +9,6 @@
 		"watch": true
 	},
 	"files": [
-		"xsn-config.mts",
 		"make.ts",
 		"doc.mts"
 	],
