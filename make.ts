@@ -1,26 +1,26 @@
 export const make = {
     ":host": {
-        "be": "definitive",
-        "having": {
-            "config":{
-                "propDefaults": {
-                    "open":false,
-                    "closed":true,
-                    "hydratingTransform":{
-                        "openerP":[{"disabled":false},{"click":{"prop":"open","toggleProp":true}}],
-                        "closeBtnP":[{},{"click":{"prop":"open","toggleProp":true}}]
+        be: "definitive",
+        having: {
+            config:{
+                propDefaults: {
+                    open:false,
+                    closed:true,
+                    hydratingTransform:{
+                        openerP:[{disabled:false},{click:{prop:"open",toggleProp:true}}],
+                        closeBtnP:[{},{click:{prop:"open",toggleProp:true}}]
                     },
-                    "transform":{
-                        "aside":[{},{},{"data-open":"open","data-mode":"mode","inert":"closed"}]
+                    transform:{
+                        aside:[{},{},{"data-open":"open","data-mode":"mode",inert:"closed"}]
                     },
-                    "mode":"ltr"
+                    mode:"ltr"
                 },
-                "propInfo":{
-                    "open":{
-                        "notify":{
-                            "negateTo":"closed",
-                            "dispatch":true,
-                            "reflectTo":{"attr":true}
+                propInfo:{
+                    open:{
+                        notify:{
+                            negateTo:"closed",
+                            dispatch:true,
+                            reflectTo:{"attr":true}
                         }
                     }
                 }

@@ -24,29 +24,16 @@
     "serve": "node node_modules/may-it-serve/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
-    "build-dfn": "node xsn-config.mjs -dfn > xtal-side-nav.dfn.json",
-    "build-js": "node xsn-config.mjs -js > xtal-side-nav.js",
-    "build-html": "node xsn-config.mjs -html > xtal-side-nav.html",
-    "build-manifest": "node doc.mjs > custom-elements.json",
-    "watch": "npm-watch"
-  },
-  "watch": {
-    "build-dfn": "*-config.mjs",
-    "build-js": "*-config.mjs",
-    "build-html": "*-config.mjs",
-    "build-manifest": "types.d.ts"
+    "build-manifest": "node doc.mjs > custom-elements.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-active": "0.0.47",
     "be-definitive": "0.0.81",
     "be-decorated": "0.0.211",
     "be-hive": "0.0.78",
-    "be-loaded": "0.0.93",
-    "may-it-be": "0.0.171",
     "trans-render": "0.0.653",
     "xtal-element": "0.0.547",
     "be-having": "0.0.3"
@@ -55,7 +42,7 @@
     "@custom-elements-manifest/analyzer": "0.6.4",
     "@skypack/package-check": "0.2.2",
     "be-importing": "0.0.41",
-    "npm-watch": "0.11.0",
+    "may-it-be": "0.0.171",
     "may-it-serve": "0.0.4"
   },
   "author": "anderson.bruce.b@gmail.com",
