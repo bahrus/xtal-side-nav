@@ -33,7 +33,7 @@
   "dependencies": {
     "be-definitive": "0.0.81",
     "be-decorated": "0.0.211",
-    "be-hive": "0.0.78",
+    "be-hive": "0.0.79",
     "trans-render": "0.0.653",
     "xtal-element": "0.0.547",
     "be-having": "0.0.3"
@@ -42,6 +42,7 @@
     "@custom-elements-manifest/analyzer": "0.6.4",
     "@skypack/package-check": "0.2.2",
     "be-importing": "0.0.41",
+    "be-written": "0.0.11",
     "may-it-be": "0.0.171",
     "may-it-serve": "0.0.4"
   },

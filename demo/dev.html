@@ -8,7 +8,11 @@
 </head>
 <body>
     <div style='height:300px'>hello</div>
-    <xtal-side-nav>
+    <xtal-side-nav be-written='{
+        "from": "../xtal-side-nav.html",
+        "between": ["<!--begin-->", "<!--end-->"],
+        "shadowRoot": "open"
+    }'>
         <button>test1</button>
         <button>test2</button>
         <button>test3</button>
@@ -17,33 +21,34 @@
         <button>test6</button>
         <button>test7</button>
         <button>test8</button>
+        <button>test 9</button>
     </xtal-side-nav>
-    <button>test 9</button>
+    
     <script type=importmap>
         {
             "imports": {
                 "trans-render/": "../node_modules/trans-render/",
-                "xodus/": "../node_modules/xodus/",
-                "on-to-me/": "../node_modules/on-to-me/",
-                "be-active/": "../node_modules/be-active/",
+                "be-based/": "../node_modules/be-based/",
                 "be-decorated/": "../node_modules/be-decorated/",
                 "be-definitive/": "../node_modules/be-definitive/",
-                "be-fruitful/": "../node_modules/be-fruitful/",
+                "be-exportable/": "../node_modules/be-exportable/",
+                "be-having/": "../node_modules/be-having/",
                 "be-hive/": "../node_modules/be-hive/",
-                "be-observant/": "../node_modules/be-observant/",
-                "be-noticed/": "../node_modules/be-noticed/",
-                "xtal-decor/": "../node_modules/xtal-decor/",
+                "be-written/": "../node_modules/be-written/",
+                "stream-orator/": "../node_modules/stream-orator/",
                 "xtal-element/": "../node_modules/xtal-element/"
             }
         }
     </script>
     <script type=module>
-        import '../xtal-side-nav.js';
+        import 'be-written/be-written.js';
     </script>
-    <script>
-        const x = document.querySelector('xtal-side-nav');
-        x.onbeforematch = () => {
-            console.log('iah');
+    <script type=module>
+        if(customElements.get('be-having') === undefined){
+            import('be-having/be-having.js').catch(err => {
+                console.debug(err);
+                import('https://esm.run/be-having@0.0.3');
+            });
         }
     </script>
 </body>
