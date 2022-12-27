@@ -53,13 +53,5 @@
     <script type=module>
         import 'be-importing/be-importing.js';
     </script>
-    <script type=module>
-        if(customElements.get('be-having') === undefined){
-            import('be-having/be-having.js').catch(err => {
-                console.debug(err);
-                import('https://esm.run/be-having@0.0.3');
-            });
-        }
-    </script>
 </body>
 </html>

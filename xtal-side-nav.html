@@ -93,10 +93,10 @@
 </xtal-side-nav>
 
 <script type=module>
-    if(customElements.get('be-having') === undefined){
-        import('be-having/be-having.js').catch(err => {
+    if(customElements.get('be-importing') === undefined){
+        import('be-importing/be-importing.js').catch(err => {
             console.debug(err);
-            import('https://esm.run/be-having@0.0.3');
+            import('https://esm.run/be-importing@0.0.43');
         });
     }
 </script>
