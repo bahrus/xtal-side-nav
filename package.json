@@ -41,8 +41,7 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.4",
     "@skypack/package-check": "0.2.2",
-    "be-importing": "0.0.41",
-    "be-written": "0.0.12",
+    "be-importing": "0.0.42",
     "may-it-be": "0.0.171",
     "may-it-serve": "0.0.4"
   },
