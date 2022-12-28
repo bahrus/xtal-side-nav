@@ -1,4 +1,4 @@
-import {CEArgs} from 'trans-render/froop/types'
+import {EndUserProps as BeDefEUP} from 'be-definitive/types';
 export const make = {
     ":host": {
         be: "definitive",
@@ -26,6 +26,6 @@ export const make = {
                     }
                 }
             }
-        } as CEArgs,
+        } as BeDefEUP,
     }
 };
