@@ -36,7 +36,7 @@
     "be-hive": "0.0.79",
     "trans-render": "0.0.653",
     "xtal-element": "0.0.547",
-    "be-importing": "0.0.44"
+    "be-importing": "0.0.45"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.6.4",
