@@ -1,3 +1,4 @@
+import {CEArgs} from 'trans-render/froop/types'
 export const make = {
     ":host": {
         be: "definitive",
@@ -25,6 +26,6 @@ export const make = {
                     }
                 }
             }
-        }
+        } as CEArgs,
     }
 };
