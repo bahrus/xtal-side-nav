@@ -14,7 +14,8 @@
   "module": "make.js",
   "exports": {
     ".": "./make.js",
-    "./make.js": "./make.js"
+    "./make.js": "./make.js",
+    "./index.js": "./index.js"
   },
   "types": "types.d.ts",
   "files": [
