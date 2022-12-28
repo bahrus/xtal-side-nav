@@ -6,16 +6,15 @@
     "web-component",
     "custom-element",
     "custom-elements",
-    "JSON",
-    "Editor"
+    "menu",
+    "drawer"
   ],
   "description": "Side nav (drawer) web component.",
   "main": "make.js",
   "module": "make.js",
   "exports": {
     ".": "./make.js",
-    "./make.js": "./make.js",
-    "./index.js": "./index.js"
+    "./make.js": "./make.js"
   },
   "types": "types.d.ts",
   "files": [
