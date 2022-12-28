@@ -1,12 +1,6 @@
 <xtal-side-nav>
     <template shadowroot="open"><!--begin--><!--begin-->
-        <script id=shared-xtal-side-nav-make nomodule type=module be-having>
-            //export const make='.make.js';
-            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.102/make.js'];
-            export const definitive = {
-                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.81']
-            }
-        </script>
+
         
         <main part=main>
             <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
@@ -88,7 +82,12 @@
         } 
         </style>
         <be-hive></be-hive>
-
+        <script id=shared-xtal-side-nav-make nomodule type=module be-having>
+            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.105/make.js'];
+            export const definitive = {
+                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.82']
+            }
+        </script>
     <!--end--><!--end--></template>
 </xtal-side-nav>
 
@@ -96,7 +95,7 @@
     if(customElements.get('be-importing') === undefined){
         import('be-importing/be-importing.js').catch(err => {
             console.debug(err);
-            import('https://esm.run/be-importing@0.0.43');
+            import('https://esm.run/be-importing@0.0.45');
         });
     }
 </script>

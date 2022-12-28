@@ -10,7 +10,6 @@
 	},
 	"files": [
 		"make.ts",
-		"index.ts",
 		"doc.mts"
 	],
 	"exclude":[
