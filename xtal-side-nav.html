@@ -83,9 +83,9 @@
         </style>
         <be-hive></be-hive>
         <script id=shared-xtal-side-nav-make nomodule type=module be-having>
-            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.105/make.js'];
+            export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.106/make.js'];
             export const definitive = {
-                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.82']
+                impl: ['be-definitive/be-definitive.js', 'https://esm.run/be-definitive@0.0.84']
             }
         </script>
     <!--end--><!--end--></template>
@@ -95,7 +95,7 @@
     if(customElements.get('be-importing') === undefined){
         import('be-importing/be-importing.js').catch(err => {
             console.debug(err);
-            import('https://esm.run/be-importing@0.0.45');
+            import('https://esm.run/be-importing@0.0.47');
         });
     }
 </script>
