@@ -24,7 +24,8 @@
     "serve": "node node_modules/may-it-serve/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
-    "build-manifest": "node doc.mjs > custom-elements.json"
+    "build-manifest": "node doc.mjs > custom-elements.json",
+    "safari": "npx playwright wk http://localhost:3030"
   },
   "repository": {
     "type": "git",
