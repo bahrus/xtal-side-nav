@@ -11,7 +11,7 @@ xtal-side-nav is an out-of-the-box SSR web component.
 ### Using npm modules
 
 ```html
-<xtal-side-nav be-importing=xtal-side-nav/xtal-side-nav.html>
+<xtal-side-nav be-importing=xtal-side-nav/>
     <section style='color:white'>
         <div>Menu Item 1</div>
         <div>Menu Item 2</div>
@@ -43,7 +43,7 @@ Note that we can give any name we want to the custom element, it doesn't have to
 ### Using CDN:
 
 ```html
-<xtal-side-nav be-importing=xtal-side-nav/xtal-side-nav.html>
+<xtal-side-nav be-importing=xtal-side-nav/>
     <section style='color:white'>
         <div>Menu Item 1</div>
         <div>Menu Item 2</div>
