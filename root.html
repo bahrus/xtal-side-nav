@@ -1,12 +1,14 @@
 <xtal-side-nav>
     <template shadowroot="open"><!--begin--><!--begin-->
-        <main part=main be-linked="share * from host.">
+        <main part=main be-linked='
+            Share * from host.
+        '>
             <link itemprop=open>
             <meta itemprop=mode>
             <link itemprop=unhydrated be-it=disabled>
             <button disabled aria-label="Open Menu" part=opener class=opener>&#9776; <slot name=title></slot></button>
             <link itemprop=closed be-it=inert>
-            <aside part=side-nav class=side-nav>
+            <aside part=side-nav class=side-nav inert>
                 <button aria-label="Close Menu" part=close-btn>&times;</button>
                 <section part=menu-section class=menu-section>
                     <slot id="slot"></slot>
@@ -87,18 +89,23 @@
             }
         } 
         </style>
-        <be-hive be-definitive='{
+        <be-hive enh-by-be-definitive='{
             "config": {
                 "propDefaults": {
                     "open": false,
                     "closed": true,
                     "mode": "ltr",
                     "unhydrated": false,
-
-                },
-                "actions": {}
+                    "shadowRootMode": "open"
+                }
             }
         }'></be-hive>
+        <script type="module">
+            import 'be-definitive/be-definitive.js';
+        </script>
+        <template be-active>
+            <script id="be-definitive/be-definitive.js"></script>
+        </template>
         <!-- <script id=shared-xtal-side-nav-make href=make.ts nomodule type=module be-having>
             export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.110/make.js'];
             export const definitive = {

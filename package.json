@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "be-definitive": "0.0.97",
-    "be-importing": "0.0.60",
+    "be-importing": "0.0.61",
     "be-it": "0.0.5",
     "be-linked": "0.0.22"
   },
