@@ -6,10 +6,8 @@
 		"experimentalDecorators": false,
 		"strict": true,
 		"newLine": "LF",
-		"watch": true
 	},
 	"files": [
-		"make.ts",
 		"doc.mts"
 	],
 	"exclude":[

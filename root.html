@@ -1,6 +1,6 @@
 <xtal-side-nav>
     <template shadowroot="open"><!--begin--><!--begin-->
-        <main part=main be-linked='
+        <main itemscope part=main be-linked='
             Share * from host.
         '>
             <link itemprop=open>
@@ -105,6 +105,8 @@
         </script>
         <template be-active>
             <script id="be-definitive/be-definitive.js"></script>
+            <script id="be-linked/be-linked.js"></script>
+            <script id="be-it/be-it.js"></script>
         </template>
         <!-- <script id=shared-xtal-side-nav-make href=make.ts nomodule type=module be-having>
             export const make = ['xtal-side-nav/make.js', 'https://esm.run/xtal-side-nav@0.0.110/make.js'];
