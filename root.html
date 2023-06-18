@@ -1,17 +1,17 @@
 <xtal-side-nav>
     <template shadowroot="open"><!--begin--><!--begin-->
-        <main itemscope part=main be-linkedx='
+        <main itemscope part=main be-linked='
             Share * from host.
         '>
-            <link itemprop=open>
+            <link itemprop=open />
             <meta itemprop=mode>
-            <link itemprop=unhydrated be-itx=disabled>
-            <button disabledx aria-label="Open Menu" part=opener class=opener be-linked='
+            <link itemprop=unhydrated be-it=disabled />
+            <button disabled aria-label="Open Menu" part=opener class=opener be-linked='
                 Toggle open property.
             '>&#9776; <slot name=title></slot></button>
-            <link itemprop=closed be-itx=inert>
+            <link itemprop=closed be-it=inert />
             <aside part=side-nav class=side-nav inert>
-                <button aria-label="Close Menu" part=close-btn be-linkedx='
+                <button aria-label="Close Menu" part=close-btn be-linked='
                     Toggle open property.
                 '>&times;</button>
                 <section part=menu-section class=menu-section>
@@ -61,17 +61,19 @@
         .side-nav[data-mode="rtl"]{
             right: 8px;
         }
-        /*
-        TODO:  use FLIP?
-        */
-        .side-nav[data-open]{
+
+        /* .side-nav[data-open]{
+            width: var(--drawer-width);
+        } */
+
+        main:has(link[itemprop="open"][href="https://schema.org/True"]) .side-nav{
             width: var(--drawer-width);
         }
 
-        .side-nav:not([data-open]){
+        /* .side-nav:not([data-open]){
             width: 0px;
             height:0px;
-        }
+        } */
 
         .side-nav button {
             position: absolute;
