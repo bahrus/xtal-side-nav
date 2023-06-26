@@ -3,7 +3,7 @@
         <main itemscope part=main>
             <link itemprop=open href="https://schema.org/False">
             <meta itemprop=mode content="ltr">
-            <link itemprop=unhydrated be-it=disabled>
+            <link itemprop=unhydrated be-it=disabled href="https://schema.org/False">
             <button disabled aria-label="Open Menu" part=opener class=opener be-linked='
                 Toggle open property.
             '>&#9776; <slot name=title></slot></button>
@@ -88,9 +88,6 @@
         </style>
         <be-hive enh-by-be-definitive='{
             "config": {
-                "propDefaults": {
-                    "unhydrated": false
-                },
                 "propInfo": {
                     "open": {
                         "notify": {
