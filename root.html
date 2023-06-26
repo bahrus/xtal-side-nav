@@ -2,7 +2,7 @@
     <template shadowrootmode="open"><!--begin--><!--begin-->
         <main itemscope part=main>
             <link itemprop=open>
-            <meta itemprop=mode>
+            <meta itemprop=mode content="ltr">
             <link itemprop=unhydrated be-it=disabled>
             <button disabled aria-label="Open Menu" part=opener class=opener be-linked='
                 Toggle open property.
@@ -96,11 +96,10 @@
         <be-hive enh-by-be-definitive='{
             "config": {
                 "propDefaults": {
-                    "closed": true,
-                    "mode": "ltr",
                     "unhydrated": false,
                     "shadowRootMode": "open"
                 },
+                "derivedProps": ["closed"],
                 "propInfo": {
                     "open": {
                         "notify": {
