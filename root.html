@@ -1,13 +1,13 @@
 <xtal-side-nav>
     <template shadowrootmode="open"><!--begin--><!--begin-->
         <main itemscope part=main>
-            <link itemprop=open>
+            <link itemprop=open href="https://schema.org/False">
             <meta itemprop=mode content="ltr">
             <link itemprop=unhydrated be-it=disabled>
             <button disabled aria-label="Open Menu" part=opener class=opener be-linked='
                 Toggle open property.
             '>&#9776; <slot name=title></slot></button>
-            <link itemprop=closed be-it=inert >
+            <link itemprop=closed be-it=inert href="https://schema.org/True">
             <aside part=side-nav class=side-nav inert>
                 <button aria-label="Close Menu" part=close-btn be-linked='
                     Toggle open property.
@@ -53,25 +53,18 @@
             overflow-x: hidden;
             transition: 0.5s;
         }
-        .side-nav[data-mode="ltr"]{
+
+        main:has(meta[itemprop="mode"][content="ltr"]) .side-nav{
             left: 8px;
         }
-        .side-nav[data-mode="rtl"]{
+
+        main:has(meta[itemprop="mode"][content="rtl"]) .side-nav{
             right: 8px;
         }
 
-        /* .side-nav[data-open]{
-            width: var(--drawer-width);
-        } */
-
-        main:has(link[itemprop="open"][href="https://schema.org/True"]) .side-nav{
+        main:has(link[itemprop="open"][href$="True"]) .side-nav{
             width: var(--drawer-width);
         }
-
-        /* .side-nav:not([data-open]){
-            width: 0px;
-            height:0px;
-        } */
 
         .side-nav button {
             position: absolute;
@@ -96,10 +89,8 @@
         <be-hive enh-by-be-definitive='{
             "config": {
                 "propDefaults": {
-                    "unhydrated": false,
-                    "shadowRootMode": "open"
+                    "unhydrated": false
                 },
-                "derivedProps": ["closed"],
                 "propInfo": {
                     "open": {
                         "notify": {
