@@ -25,16 +25,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package-check": "package-check",
     "build-manifest": "node doc.mjs > custom-elements.json",
-    "safari": "npx playwright wk http://localhost:3030"
+    "safari": "npx playwright wk http://localhost:3030",
+    "update": "ncu -u && npm install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-definitive": "0.0.105",
-    "be-importing": "0.0.64",
-    "be-hive": "0.0.110"
+    "be-definitive": "0.0.106",
+    "be-importing": "0.0.66",
+    "be-hive": "0.0.115"
   },
   "devDependencies": {
     "may-it-be": "0.0.171",
