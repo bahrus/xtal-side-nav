@@ -1,107 +1,114 @@
 <xtal-side-nav>
     <template shadowrootmode="open"><!--begin--><!--begin-->
+        <style adopt>
+            :host {
+                display: inherit;
+                --drawer-width:250px;
+                --side-nav-position:fixed;
+                --close-button-left: 50px;
+            }
+    
+            .stream-orator-wrapper{
+                display: inherit;
+            }
+    
+            main {
+                position: relative;
+                display: inherit;
+            }
+    
+            .menu-section{
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - var(--close-button-left));
+            }
+    
+            .side-nav {
+                width: 0;
+                position: var(--side-nav-position);
+                display:flex;
+                flex-direction:column;
+                z-index: 10;
+                top: inherit;
+                left: inherit;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+    
+            main:has(meta[itemprop="mode"][content="ltr"]) .side-nav{
+                left: 8px;
+            }
+    
+            main:has(meta[itemprop="mode"][content="rtl"]) .side-nav{
+                right: 8px;
+            }
+    
+            main:has(link[itemprop="open"][href$="True"]) .side-nav{
+                width: var(--drawer-width);
+            }
+    
+            .side-nav button {
+                position: absolute;
+                cursor:pointer;
+                top: 0;
+                right: 0px;
+                margin-left: var(--close-button-left);
+                transition: 0.3s;
+            }
+            .opener{
+                /* font-size:30px; */
+                cursor:pointer
+            }
+    
+    
+            @media screen and (max-height: 450px) {
+                .side-nav {
+                    padding-top: 15px;
+                }
+            } 
+        </style>
         <main itemscope part=main>
             <link itemprop=open href="https://schema.org/False">
             <meta itemprop=mode content="ltr">
             <link itemprop=unhydrated be-it=disabled href="https://schema.org/False">
-            <button disabled aria-label="Open Menu" part=opener class=opener be-linked='
-                Toggle open property.
-            '>&#9776; <slot name=title></slot></button>
-            <link itemprop=closed be-it=inert href="https://schema.org/True">
+            <button disabled aria-label="Open Menu" part="opener toggler" class=opener>&#9776; <slot name=title></slot></button>
+            <link itemprop=closed href="https://schema.org/True">
             <aside part=side-nav class=side-nav inert>
-                <button aria-label="Close Menu" part=close-btn be-linked='
-                    Toggle open property.
-                '>&times;</button>
+                <button aria-label="Close Menu" part="close-btn toggler">&times;</button>
                 <section part=menu-section class=menu-section>
                     <slot id="slot"></slot>
                 </section>
             </aside>
         </main>
-
-        <style adopt>
-        :host {
-            display: inherit;
-            --drawer-width:250px;
-            --side-nav-position:fixed;
-            --close-button-left: 50px;
-        }
-
-        .stream-orator-wrapper{
-            display: inherit;
-        }
-
-        main {
-            position: relative;
-            display: inherit;
-        }
-
-        .menu-section{
-            display: flex;
-            flex-direction: column;
-            width: calc(100% - var(--close-button-left));
-        }
-
-        .side-nav {
-            width: 0;
-            position: var(--side-nav-position);
-            display:flex;
-            flex-direction:column;
-            z-index: 10;
-            top: inherit;
-            left: inherit;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-        }
-
-        main:has(meta[itemprop="mode"][content="ltr"]) .side-nav{
-            left: 8px;
-        }
-
-        main:has(meta[itemprop="mode"][content="rtl"]) .side-nav{
-            right: 8px;
-        }
-
-        main:has(link[itemprop="open"][href$="True"]) .side-nav{
-            width: var(--drawer-width);
-        }
-
-        .side-nav button {
-            position: absolute;
-            cursor:pointer;
-            top: 0;
-            right: 0px;
-            margin-left: var(--close-button-left);
-            transition: 0.3s;
-        }
-        .opener{
-            /* font-size:30px; */
-            cursor:pointer
-        }
-
-
-        @media screen and (max-height: 450px) {
-            .side-nav {
-                padding-top: 15px;
-            }
-        } 
-        </style>
-        <be-hive enh-by-be-definitive='{
-            "config": {
-                "propInfo": {
-                    "open": {
-                        "notify": {
-                            "negateTo": "closed",
-                            "dispatch": true,
-                            "reflectTo": {"attr": true}
-                        }
+        <xtal-element
+            infer-props
+            xform='{
+                "% toggler": {
+                    "m": {
+                        "on": "click",
+                        "toggle": "open"
+                    }
+                },
+                "aside": {
+                    "o": ["closed"],
+                    "s": "inert"
+                },
+                "button": {
+                    "o": ["unhydrated"],
+                    "s": "disabled"
+                }
+            }'
+            prop-info='{
+                "open":{
+                    "notify": {
+                        "negateTo": "closed",
+                        "dispatch": true,
+                        "reflectTo": {"attr": true}
                     }
                 }
-            }
-        }'></be-hive>
-        <template be-active be-gone>
-            <script data-version="0.0.105" id="be-definitive/be-definitive.js"></script>
-        </template>
+            }'
+        ></xtal-element>
     <!--end--><!--end--></template>
 </xtal-side-nav>
 
@@ -109,7 +116,7 @@
     if(customElements.get('be-importing') === undefined){
         import('be-importing/be-importing.js').catch(err => {
             console.debug(err);
-            import('https://esm.run/be-importing@0.0.64');
+            import('https://esm.run/be-importing@0.0.65');
         });
     }
 </script>

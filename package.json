@@ -33,13 +33,14 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-definitive": "0.0.106",
-    "be-importing": "0.0.66",
-    "be-hive": "0.0.115"
+    "be-enhanced": "0.0.58",
+    "be-hive": "0.0.129",
+    "be-importing": "0.0.67",
+    "xtal-element": "0.0.582"
   },
   "devDependencies": {
     "may-it-be": "0.0.171",
-    "may-it-serve": "0.0.5"
+    "may-it-serve": "0.0.6"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
