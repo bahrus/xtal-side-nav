@@ -112,12 +112,5 @@
     <!--end--><!--end--></template>
 </xtal-side-nav>
 
-<script type=module>
-    if(customElements.get('be-importing') === undefined){
-        import('be-importing/be-importing.js').catch(err => {
-            console.debug(err);
-            import('https://esm.run/be-importing@0.0.65');
-        });
-    }
-</script>
+
 
