@@ -32,10 +32,10 @@
     "url": "git+https://github.com/bahrus/xtal-side-nav.git"
   },
   "dependencies": {
-    "be-enhanced": "0.0.66",
-    "be-hive": "0.0.135",
-    "be-importing": "0.0.75",
-    "xtal-element": "0.0.594"
+    "be-enhanced": "0.0.69",
+    "be-hive": "0.0.138",
+    "be-importing": "0.0.78",
+    "xtal-element": "0.0.598"
   },
   "devDependencies": {
     "may-it-be": "0.0.171",
