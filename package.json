@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "may-it-be": "0.0.171",
-    "may-it-serve": "0.0.6"
+    "may-it-serve": "0.0.11"
   },
   "author": "anderson.bruce.b@gmail.com",
   "license": "MIT",
